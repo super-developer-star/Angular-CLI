@@ -1,0 +1,128 @@
+<div class="container-fluid" >
+<h1 class="first-title">{{title}}</h1>
+  <p class="delai">
+    <img src="../../../assets/images/shopping-offer/temps.png" class="clock" alt="" width="26" height="26" >
+    Expire {{getJours()}}
+  </p>
+  <img src="{{picture_url}}" class="img-responsive center-image offer-img-bg" >
+
+</div>
+<div class="div-glob-desc">
+  <div class="content-cgu" [innerHTML]=" subtitle | safeHtml ">
+
+  </div>
+</div>
+<div *ngIf="type==1" class="second-block">
+
+  <img src="../../../assets/images/shopping-offer/bonplan.png" class="shop">
+  <h2 class="second-txt">Comment en profiter ?</h2>
+  <p class="second-desc">Cette offre est accessible à tous. Il vous suffit de demander à en bénéficier lors de vos achats en magasin.<br>
+    Retrouvez également cette offre sur votre application TF1 conso</p>
+  <div class="images" >
+
+    <span class="col-sm-6 col-xs-12"><a href="{{appleStoreShop}}" target="_blank"><img class="image-app" src="../../../assets/images/shopping-offer/App-Store.png" width="172" height="50"></a></span>
+    <span class="col-sm-6 col-xs-12 "><a href="{{googleStoreShop}}" target="_blank"><img class="image-goog" src="../../../assets/images/shopping-offer/Google-Store.png" width="172" height="50"></a></span>
+  </div>
+
+</div>
+<div *ngIf="type==2" class="second-block">
+
+  <img src="../../../assets/images/shopping-offer/partenaire.png" class="shop">
+  <h2 class="second-txt">Comment en profiter ?</h2>
+  <p class="second-desc">Rendez-vous sur le site de notre partenaire</p>
+  <div class="images" >
+    <a class="profite-btn btn btn-primary" href="{{website}}" target="_blank" (click)="postOfferToBasket();"> J'en profite</a>
+  </div>
+
+</div>
+<div *ngIf="type==3" class="second-block">
+
+  <img src="../../../assets/images/shopping-offer/couponOff.png" class="shop">
+  <h2 class="second-txt">Comment en profiter ?</h2>
+  <p class="second-desc">Présentez votre coupon en caisse pour une réduction immédiate</p>
+  <div class="images" >
+
+    <button class="profite-btn btn btn-primary" *ngIf="(coupon_type==1)||(coupon_type==2)" (click)="lgModal.show()" (click)="postOfferToBasket();">J'en profite</button>
+    <button class="profite-btn btn btn-primary" *ngIf="coupon_type==3"  (click)="postOfferToBasket();"><a href="{{coupon_pdf}}" target="_blank" style="color: white;text-decoration:none; ">J'en profite</a></button>
+  </div>
+
+</div>
+
+
+<div class="global">
+  <h2 class="title">Où en profiter de ce bon plan ?</h2>
+  <p class="magasin-num">{{getMagasin()}}</p>
+
+
+  <sebm-google-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="true" [zoom]="zoom" >
+    <sebm-google-map-marker [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'" [latitude]="latitude" [longitude]="longitude"></sebm-google-map-marker>
+    <sebm-google-map-marker [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/red-dot.png'" [latitude]="store_lat" [longitude]="store_lng"></sebm-google-map-marker>
+  </sebm-google-map>
+  <img src="../../../../assets/images/shopping-offer/filler2.png" width="42" height="42" class="img-location2" (click)="setCurrentPosition()" style="cursor: pointer;">
+  <div class="magasin-detail" >
+    <div class="form-group col-xs-10">
+      <label ></label>
+      <input type="text" placeholder="Recherche le plus proche" autocorrect="off" autocapitalize="off" spellcheck="off" class="form-control search-input" #search [formControl]="searchControl"/>
+    </div>
+    <div class="col-xs-2">
+      <img src="../../../../assets/images/shopping-offer/Filler.png" width="14" height="14" class="img-location" (click)="setCurrentPosition()" style="cursor: pointer;">
+    </div>
+    <img src="{{picture_url_logo}}"  class="img-magasin">
+    <img src="../../../../assets/images/shopping-offer/map-loc.png" width="42" height="42" class="img-static" >
+    <div class="div-desc">
+      <p class="magasin-desc">{{store_name | upperfirst}}</p>
+      <p class="magasin-desc">{{store_street | upperfirst}}</p>
+      <p class="magasin-desc">{{store_postal_code}} {{store_city | upperfirst}}</p>
+    </div>
+    <div class="div-desc2">
+      <table>
+        <tr>
+          <td class="magasin-desc"><img src="../../../../assets/images/shopping-offer/btn-tel-off.png" width="20" height="20" class="img-tel">{{store_tel}}</td>
+          <td class="magasin-desc"><img src="../../../../assets/images/shopping-offer/ic-localisation.png" width="13" height="19" class="img-loc">{{store_distance}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</div>
+<div class="div-cgu">
+  <div class="content-cgu">
+    <p class="title-cgu">CGU</p>
+    <p class="desc-cgu">{{condition}}</p>
+  </div>
+</div>
+
+<div bsModal #lgModal="bs-modal" class="modal fade " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg mar-top1 mar-top" >
+    <div class="modal-content" style="overflow: hidden;">
+      <div class="modal-header">
+        <button type="button" class="close" (click)="lgModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body row" >
+        <a (click)="lgModal.hide()"><img src="../../../assets/images/header/close-modal.png" width="10" height="10" class="close-btn"></a>
+        <img src="../../../assets/images/shopping-offer/cadeau.png" width="225" height="133" class="img-responsive img-center cad">
+        <div class="col-sm-12 glob-content">
+          <div class="col-sm-6 col-xs-12 left-side">
+            <p class="felici">Félicitations !</p>
+            <p class="ce-coupon">Ce coupon vous est proposé par</p>
+            <p class="magaz-txt">{{brand}}</p>
+          </div>
+          <div class="col-sm-6 col-xs-12 right-side" *ngIf="coupon_type==1">
+            <p class="coupon-code">{{coupon_code}}</p>
+          </div>
+          <div class="col-sm-6 col-xs-12 right-side" *ngIf="coupon_type==2">
+              <p class="coupon-code">{{coupon_exclusif_code}}</p>
+          </div>
+
+        </div>
+        <p class="delai-modal">
+          <img src="../../../assets/images/shopping-offer/temps.png" alt="" width="18" height="18" style="margin-top: -3px;margin-right: 5px;">
+          Expire le {{expiration_date2}}
+        </p>
+        <button class="merci-btn btn btn-primary" (click)="lgModal.hide()">Merci</button>
+      </div>
+    </div>
+  </div>
+</div>

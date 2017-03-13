@@ -1,0 +1,9 @@
+<!--first page -->
+<app-first-page *ngIf=" visited == false "> </app-first-page>
+<div *ngIf=" visited == true ">
+<app-header [infopo]="popUpService?.popUpState "></app-header>
+<app-breadcrumb></app-breadcrumb>
+<router-outlet></router-outlet>
+<div class="vertical-offset"></div>
+<app-footer></app-footer>
+</div>

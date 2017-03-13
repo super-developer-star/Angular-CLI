@@ -1,0 +1,198 @@
+
+<header>
+  <div class="header-logo">
+  <img  src="../../../assets/images/header/logo.png" [routerLink]="['/']"  title="logo tf1"  alt="logo tf1"  id="logo">
+  <h1 class="logo-txt">Plus de 10 000 réductions </h1>
+    <button *ngIf="!islogged" class="login-btn btn btn-primary" (click)="showChildModal()">CONNEXION / CRÉER UN COMPTE</button>
+    <button *ngIf="!islogged" class="login-btn-mobile" (click)="showChildModal()"></button>
+    <button *ngIf="islogged && !account" class="profile-btn" [routerLink]="['/mon-compte']">MON COMPTE</button>
+    <button *ngIf="islogged && account" class="logout-btn" (click)="logout()">Déconnexion</button>
+
+  </div>
+</header>
+<div class="coupon" [ngClass]="{'hide-coup': hide_coup }">
+  <p class="coupon-amount">{{getTotalPrice()}}€</p>
+  <p class="coupon-number">({{getTotalNumber()}})</p>
+  <button class="profite-btn btn btn-primary" (click)="jenprofite()">J'en profite</button>
+
+</div>
+
+<div id="modal1" bsModal #lgModal="bs-modal" class="modal fade " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg" [ngClass]="{'mar-top1': topOne,'mar-top2': topTwo }">
+    <div class="modal-content"  [ngClass]="{'modal-content1': size }">
+      <div class="modal-header">
+        <button type="button" class="close"  (click)="hideChildModal();" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body row" >
+
+        <div class="slide-container" [ngClass]="{'horizTranslate': translate,'retourTranslate': retour }">
+          <div class="slider-holder col-xs-4" id="slider-content-1" >
+            <a (click)="hideChildModal();"><img src="../../../assets/images/header/close-modal.png" width="10" height="10" class="close-btn"></a>
+            <div class="col-sm-12 col-xs-12" style="padding: 0;">
+             <div class="col-sm-6 col-xs-12" style="padding: 0;">
+             <form class="form-connect" [ngClass]="{'fixed': fixed }" [formGroup]="loginForm" (ngSubmit)="onSubmitLogin($event);">
+               <a (click)="hideChildModal();"><img src="../../../assets/images/header/croix.png" width="10" height="10" class="close-btn2"></a>
+               <p class="title-form1">Déjà inscrit ?</p>
+               <div class="form-group">
+                 <label class="label-email"></label>
+                 <input type="text" placeholder="mail" class="form-control" formControlName="email" #email1 (change)="0" [ngClass]="{'error-input-login': emailAuthV }">
+                 <!--<div  *ngIf="!loginForm.controls.email.valid" style="color: red;">
+                   Veuillez vérifier le format du champ email
+                 </div>-->
+               </div>
+               <div class="form-group">
+                 <label ></label>
+                 <input type="password" placeholder="mot de passe" formControlName="password" class="form-control" [ngClass]="{'error-input-login': passwordAuthV }">
+               </div>
+               <table style="float: right;">
+                 <tr>
+                   <td>
+                     <span class="lab">Se souvenir de moi </span>
+                     <input type="checkbox" name="checkbox_lite" id="checkbox1" class="css-checkbox1" value="0" formControlName="souvenir"/>
+                     <label for="checkbox1" class="css-label1 radGroup1"></label>
+                   </td>
+                 </tr>
+               </table>
+
+               <div class="div-btn-conn">
+                 <p style="margin-top: -25px;color: red;" *ngIf="errorMessageAuth">{{errorMessageAuth}}</p>
+               <button type="submit"  class="btn-connexion btn btn-primary">Connexion</button>
+                 <br><br>
+                 <a class="mdp-oublie" (click)="goToSlideThree()">Mot de passe oublié ?</a>
+               </div>
+               <div class="div-fb-connect">
+                 <a class="lien-fb">
+                   <img src="../../../assets/images/header/fb-logo.png" class="logo-fb" >
+                   Connexion avec Facebook
+                 </a>
+               </div>
+
+             </form>
+               <button  class="inscri-btn2 btn btn-primary" (click)="goToSlideTow()">Inscription par mail</button><br><br><br><br>
+             </div>
+              <div class="col-sm-6 col-xs-12 right-auth" style="text-align: center;margin-left: -5%;">
+                <p class="title-block2">Pas encore inscrit ?</p><br>
+                <p class="content-block2">Inscrivez-vous et bénéficiez de plus de 45 € de réduction par semaine</p><br><br>
+                <button  class="inscri-btn btn btn-primary" (click)="goToSlideTow()">Inscription par mail</button><br><br><br><br>
+                <button  class="fb-inscri-btn btn btn-primary" style="display: none;">Inscription avec Facebook</button>
+              </div>
+            </div>
+          </div>
+          <div class="slider-holder col-xs-4" id="slider-content-2" [ngClass]="{'hide-slide': hide }" (click)="onBlurDatePick()">
+            <p class="txt-inscri">Inscription</p>
+            <a (click)="goToSlideOneFromTwo()"><img src="../../../assets/images/header/back.png" width="16" height="16" class="back-btn"></a>
+            <form class="form-inscri form-inscri-margin" [formGroup]="registerForm" (ngSubmit)="onSubmitRegister()">
+
+              <div class="col-xs-12 col-sm-12" style=";padding: 0;">
+
+                  <div class="col-xs-12 col-sm-6 marge-div-gender" >
+                    <div class="form-bottom gender-div">
+                      <table style="width: 100%;">
+                        <tr>
+                          <td style="width: 50%;text-align: center;"><input type="radio" name="gender" id="radio1" class="css-checkbox" formControlName="gender" value="2" checked="checked"/>
+                            <label for="radio1" class="css-label radGroup1">Madame</label>
+                          </td>
+                          <td style="width: 50%;text-align: center;"><input type="radio" name="gender" id="radio2" class="css-checkbox" formControlName="gender" value="1"/>
+                            <label for="radio2" class="css-label radGroup1">Monsieur</label>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="form-bottom">
+                      <label ></label>
+                      <input type="text" placeholder="Mail*" class="form-control input-height" formControlName="email" [ngClass]="{'error-input': emailV }">
+                    </div>
+                    <div class="form-bottom">
+                      <label ></label>
+                      <input type="password"  placeholder="Mot de passe*" class="form-control input-height" formControlName="password" [ngClass]="{'error-input': password1V }">
+
+                    </div>
+                    <div class="form-bottom">
+                      <label ></label>
+                      <input type="password"  placeholder="Confirmation*" class="form-control input-height" formControlName="password2" [ngClass]="{'error-input': password2V}">
+
+                    </div>
+                    <div class="form-bottom">
+                      <label ></label>
+                      <input type="text"  placeholder="Code postal*" class="form-control input-height" formControlName="postcode" [ngClass]="{'error-input': postcodeV }">
+                    </div>
+                    <div class="fb-div">
+                    <button  class="fb-inscri-btn btn btn-primary" style="display: none;">Inscription avec Facebook</button>
+                    </div>
+              </div>
+                  <div class="col-xs-12 col-sm-6" style="padding: 0;padding-left: 1%;margin-top: -2px;">
+                    <div class="form-bottom">
+                      <label ></label>
+                      <input type="text" placeholder="Nom*" class="form-control input-height" formControlName="lastname" [ngClass]="{'error-input': lastnameV }">
+                    </div>
+                    <div class="form-bottom">
+                      <label ></label>
+                      <input type="text" placeholder="Prénom*" class="form-control input-height" formControlName="firstname" [ngClass]="{'error-input': firstnameV }">
+
+                    </div>
+                    <div class="form-bottom">
+                      <label ></label>
+                      <input type="text" readonly="readonly"  [value]="registerForm.controls.customDatepickerValue.value"  placeholder="Date de naissance*" (focus)="openDatePick()" (click)="strrop($event)" (keydown)="keystop($event)" class="form-control input-height" formControlName="birthday" [ngClass]="{'error-input': birthdayV }">
+                      <custom-datepicker formControlName="customDatepickerValue" [hidden]="!openCalendar" (click)="strrop($event)"></custom-datepicker>
+                    </div>
+                    <table class="tab-check">
+                      <tr>
+                        <td><input type="checkbox" name="checkbox_lite" id="checkbox2" class="css-checkbox2"  formControlName="partner"/>
+                          <label for="checkbox2" class="css-label2 radGroup2">
+                            J’accepte de recevoir les offres des partenaires de
+                            TF1conso par mail et / ou SMS géolocalisé
+                          </label></td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" name="checkbox_lite" id="checkbox3" class="css-checkbox3" value="0" formControlName="condition" />
+                          <label for="checkbox3" class="css-label3 radGroup3" [ngClass]="{'css-labelerror': conditionV }">
+                            J’accepte les conditions générales d’utilisation
+                          </label></td>
+                      </tr>
+
+                    </table>
+                    <div class="div-btn-inscrit">
+                      <p style="color: red;" *ngIf="errorMessageRegister" >{{errorMessageRegister}}</p>
+                      <button type="submit" class="inscri-btn btn btn-primary">Inscription</button>
+                    </div>
+                    </div>
+
+
+              </div>
+
+            </form>
+          </div>
+          <div class="slider-holder col-xs-4" id="slider-content-3">
+            <p class="txt-inscri">Mot de passe oublié</p>
+            <a (click)="goToSlideOneFromThree()"><img src="../../../assets/images/header/back.png" width="16" height="16" class="back-btn"></a>
+            <div style="text-align: center; margin-top: 40px;">
+             <img src="../../../assets/images/header/mdp.png" width="163" height="169" >
+            </div>
+            <form class="form-inscri" [formGroup]="resetPassForm" (ngSubmit)="onSubmitResetPass($event);">
+
+                <div class="col-xs-12 col-sm-12" style=";padding: 0; text-align: center;">
+                <div class="col-xs-12 col-sm-3">
+
+                 </div>
+                <div class="col-xs-12 col-sm-6" style="margin-bottom: 40px;">
+                  <label ></label>
+                  <input type="text" placeholder="Mail*" value="{{email1.value}}" class="form-control input-height" formControlName="email" [ngClass]="{'error-input': emailResetV }">
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                </div>
+              </div>
+              <div style="text-align: center;">
+                <p style="color: red;" *ngIf="errorMessageReset">{{errorMessageReset}}</p>
+                <p style="color: green;" *ngIf="successMessageReset">{{successMessageReset}}</p>
+                <button  class="fb-inscri-btn btn btn-primary" style="width: 240px;">Envoyer</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

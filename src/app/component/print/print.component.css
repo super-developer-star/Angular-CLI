@@ -1,0 +1,161 @@
+.main{
+  margin-left: 10%;
+  width: 80%;
+  display:block;
+  overflow:auto;
+  margin-bottom: 10px;
+
+}
+
+.print-number{
+  color: #1BCAC1;
+}
+
+.printer-img{
+  width: 100%;
+}
+.step{
+  margin-left: 30px;
+  font-size: 20px;
+  font-family: "Source Sans Pro";
+  color: #9B9B9B;
+  line-height: 40px;
+  font-weight: 300;
+}
+
+.div-img-marge{
+  margin-top: 40%;
+  width: 80%;
+}
+
+.text-div{
+  padding: 0;
+}
+
+.reduction{
+  font-size: 48px;
+  font-weight: 600;
+  font-family: "Source Sans Pro";
+  margin-left: 30px;
+
+}
+
+.nbr-coupons{
+  font-size: 17px;
+  font-family: "Source Sans Pro";
+  font-weight: bold;
+  margin-bottom: 50px;
+
+}
+
+.btn-print {
+  text-transform: uppercase;
+  border: none;
+  padding: 0;
+  height: 38px;
+  margin-left: 30px;
+  width: 270px;
+  min-width: 110px;
+  color: #fff;
+  background-color: #FF614D;
+  border-radius: 76px;
+  font-size: 18px;
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 38px;
+  margin-top: 1vw;
+  margin-bottom: 50px;
+}
+
+
+
+
+.div-text-info{
+  margin-left: 5%;
+}
+
+
+.info-tex{
+  color: #9B9B9B;
+  font-size: 12px;
+  font-family: "Source Sans Pro";
+  font-style: italic;
+}
+/*==================================================================*/
+
+
+@media (max-width: 1199px) {
+  .main{
+    margin-left: 10%;
+    width: 90%;
+    display:block;
+    overflow:auto;
+    margin-bottom: 10px;
+
+  }
+
+
+}
+
+/*==================================================================*/
+
+
+@media (max-width: 699px) {
+  .main{
+    margin-left: 0;
+    width: 100%;
+    display:block;
+    overflow:auto;
+    margin-bottom: 10px;
+
+  }
+  .div-text-info{
+    margin-bottom: 30px;
+  }
+
+  .btn-print {
+    width: 60%;
+    margin-left: 20%;
+
+  }
+
+  .div-img-marge{
+    margin-top: 10%;
+    margin-left: 5%;
+    width: 90%;
+  }
+
+  .reduction{
+    text-align: center;
+
+  }
+
+  .nbr-coupons{
+    text-align: center;
+  }
+
+  .div-title{
+    margin-left: 5%;
+    width: 90%;
+    text-align: center;
+  }
+  .reduction{
+    margin-left: 0;
+  }
+
+  .step{
+    margin-left: 5%;
+    width: 90%;
+    font-size: 17px;
+
+  }
+
+  .info-tex{
+
+    display: block;
+  }
+
+  }

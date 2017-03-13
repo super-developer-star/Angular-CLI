@@ -1,0 +1,10 @@
+.home{
+  width: 100%;
+  display: block;
+  overflow-x: hidden;
+  /*background-color: #9B9B9B;*/
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+

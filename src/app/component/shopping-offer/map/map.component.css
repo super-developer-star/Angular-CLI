@@ -1,0 +1,116 @@
+
+.global{
+  margin-top: 30px;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  text-align: center;
+}
+.title{
+  font-family: "Source Sans Pro Semibold";
+  font-size: 30px;
+  color: #16232F;
+}
+.magasin-num{
+  font-family: SourceSansPro-Bold;
+  font-size: 25px;
+  color: #495EA1;
+  padding-bottom: 10px;
+}
+.magasin-detail{
+  height:692px;
+  width:296px;
+  background-color: #495EA1;
+  position: absolute;
+  margin-top: -692px;
+  opacity: 0.85;
+}
+.search-input{
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  color: white;
+  height: 42px;
+  background: transparent url('../../../../assets/images/shopping-offer/search.png') no-repeat;
+  padding-left: 42px;
+  background-size: 20px;
+  background-position: 15px 10px;
+  margin-left: -10px;
+  margin-top: -10px;
+  width: 120%;
+}
+.search-input::-webkit-input-placeholder {font-size:16px; font-family:SourceSansPro-It;color: white; }
+.search-input:-moz-placeholder { font-size:16px; font-family: SourceSansPro-It;color: white;}
+.search-input::-moz-placeholder { font-size:16px; font-family: SourceSansPro-It;color: white;}
+.search-input:-ms-input-placeholder { font-size:16px; font-family: SourceSansPro-It;color: white;}
+
+.img-location{
+  margin-top: 22px;
+  margin-left: -5px;
+}
+
+.img-static{
+  float: right;
+  margin-right: 15px;
+  margin-top: -21px;
+  position: relative;
+}
+.img-magasin{
+  margin-top: -10px;
+}
+.div-desc{
+  float: left;
+  margin-left: 30px;
+  margin-top: 30px;
+  text-align: left;
+}
+.div-desc2{
+  float: left;
+  margin-left: 30px;
+  margin-top: 15px;
+  text-align: left;
+}
+.magasin-desc{
+  font-size: 16.5px;
+  font-family: "Source Sans Pro Semibold";
+  color: white;
+  margin-bottom: 0px;
+}
+.img-tel{
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.img-loc{
+  margin-left: 15px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.div-cgu{
+  width: 100%;
+  height: auto;
+  background-color: #FAFAFA;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  margin-top: 30px;
+}
+.content-cgu{
+  margin-left: 16%;
+  margin-right: 16%;
+}
+.title-cgu{
+  font-family: "Source Sans Pro Semibold";
+  font-size: 30px;
+  color: #16232F;
+  text-align: center;
+}
+.desc-cgu{
+  font-family: SourceSansPro-Regular;
+  font-size: 25px;
+  color: #60676C;
+}
+/******************************************Mapssssss***********************************************************************/
+.sebm-google-map-container {
+  height: 692px;
+}
+

@@ -1,0 +1,29 @@
+<div class="span8">
+  <div id="Carousel" class="carousel slide">
+
+    <div class="carousel-inner" *ngFor="let item of items;let i = index">
+
+
+      <div *ngIf="i === 1" class="item active">
+        <img class="img-slide" [src]="item.picture_url" alt="">
+        <div class="carousel-caption">
+        </div>
+      </div>
+
+
+      <div *ngIf="i !== 0" class="item">
+        <img class="img-slide" [src]="item.picture_url" alt="">
+        <div class="carousel-caption">
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+</div>
+
+
+
+

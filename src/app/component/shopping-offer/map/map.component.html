@@ -1,0 +1,42 @@
+
+<div class="global">
+<p class="title">Où en profiter ?</p>
+<p class="magasin-num">794 magasins participants</p>
+
+
+  <sebm-google-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+    <sebm-google-map-marker [latitude]="latitude" [longitude]="longitude"></sebm-google-map-marker>
+    <sebm-google-map-marker  [latitude]="latitudeMagasin" [longitude]="longitudeMagasin"></sebm-google-map-marker>
+  </sebm-google-map>
+  <div class="magasin-detail" >
+    <div class="form-group col-xs-10">
+      <label ></label>
+      <input type="text" placeholder="Recherche le plus proche" autocorrect="off" autocapitalize="off" spellcheck="off" class="form-control search-input" #search [formControl]="searchControl"/>
+    </div>
+    <div class="col-xs-2">
+      <img src="../../../../assets/images/shopping-offer/Filler.png" width="14" height="14" class="img-location" >
+    </div>
+    <img src="../../../../assets/images/shopping-offer/magasin-img.png" width="296" height="198" class="img-magasin">
+    <img src="../../../../assets/images/shopping-offer/map-loc.png" width="42" height="42" class="img-static" >
+    <div class="div-desc">
+    <p class="magasin-desc">Krys</p>
+    <p class="magasin-desc">56 rue De Sablonville</p>
+    <p class="magasin-desc">92100 Neuilly sur Seine</p>
+    </div>
+    <div class="div-desc2">
+    <table>
+      <tr>
+        <td class="magasin-desc"><img src="../../../../assets/images/shopping-offer/btn-tel-off.png" width="20" height="20" class="img-tel">01 30 57 90 73</td>
+        <td class="magasin-desc"><img src="../../../../assets/images/shopping-offer/ic-localisation.png" width="13" height="19" class="img-loc">400 m</td>
+      </tr>
+    </table>
+    </div>
+  </div>
+
+</div>
+<div class="div-cgu">
+  <div class="content-cgu">
+    <p class="title-cgu">CGU</p>
+    <p class="desc-cgu">*Du 13 octobre 2016 au 10 janvier 2017, votre opticien Krys reprend votre ancien équipement optique ou solaire (monture optique ou solaire avec ou sans verres correcteurs) et vous fait bénéficier d’une remise allant jusqu’à 75 € sous forme d’un chéquier avec des bons de réduction. Bons de réduction valables jusqu’au 28 Février 2017 à valoir sur votre prochain équipement. Voir conditions au dos des chèques. Hors site Krys.com. Dans la limite d’un chéquier par porteur. Non cumulable avec tout autre forfait, offre, promotion ou avantage particulier. Les lunettes correctrices sont des dispositifs médicaux qui constituent des produits de santé réglementés portant à ce titre le marquage CE. Consultez un professionnel de santé spécialisé. 01.10.2016. KRYS GROUP SERVICES RCS Versailles 421 390 188</p>
+  </div>
+</div>

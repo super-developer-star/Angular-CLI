@@ -1,0 +1,47 @@
+<div class="main">
+  <div class="printer-div col-sm-5">
+    <div class="div-img-marge">
+      <img class="printer-img" src="../../../assets/images/print/printer.png">
+    </div>
+  </div>
+  <div class="text-div col-sm-7">
+    <div class="div-title">
+      <h4 class="reduction">{{getTotalPrice()}}€</h4>
+      <h4 class="nbr-coupons">({{getTotalNumber()}})</h4>
+    </div>
+    <div class="div-steps">
+      <h4 class="step"><span class="print-number">1.</span>  Vérifiez que votre imprimante est allumée et reliée à l’ordinateur</h4>
+      <h4 class="step"><span class="print-number">2.</span> Vérifiez qu’il y a du papier et de l’encre dans l’imprimante</h4>
+      <h4 class="step"><span class="print-number">3.</span> Lancez l’impression avec le bouton ci-dessous</h4>
+      <h4 class="step"><span class="print-number">4.</span> Vérifiez dans vos paramètres d’imprimante le format portrait</h4>
+      <h4 class="step"><span class="print-number">5.</span> Lancez l’impression</h4>
+
+    </div>
+    <p style="color: red;margin-left: 30px;" *ngIf="errorMessage">{{errorMessage}}</p>
+    <a  class="btn btn-print" (click)="print();">imprimer mes coupons</a>
+    <br>
+    <div class="div-text-info">
+      <span class="info-tex">Sachez que les coupons ne sont valables qu’un mois seulement après l’impression.</span><br>
+      <span class="info-tex">Chaque membre dispose d’un nombre limité d’impressions pour chaque coupon.</span><br>
+      <span class="info-tex">Si un coupon ne s’imprime pas, vous l’avez probablement déjà imprimé.</span>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+</div>

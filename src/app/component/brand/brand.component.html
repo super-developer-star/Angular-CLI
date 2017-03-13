@@ -1,0 +1,59 @@
+<div class="container-brand">
+  <div class="header-brand">
+    <h1 class="title-brand"> COUPONS {{brand | uppercase}}</h1>
+    <div>
+      <div class="discription-brand-div">
+         <span class="discription-brand">
+       {{brandDiscription}}
+      </span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <img class="brand-img" *ngIf="brandURLImg!=''" [src]="brandURLImg" alt="">
+  </div>
+  <div class="" *ngIf="sameBrand.length!=0">
+    <div class="center-div-brand">
+      <h2 class="offers-brand">COUPONS {{brand | uppercase}}</h2>
+      <span class="economisez">Économisez jusqu’à {{total | currency : 'EUR' : true }} avec {{getTotalNumber()}}</span><br>
+      <a  class="btn btn-print" (click)="openPopUp();">TOUT IMPRIMER</a><br>
+
+
+    </div>
+    <div class="global-related" >
+      <!-- col marge-->
+      <div *ngFor="let item of sameBrand ;" class="offer-col col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <!--cell-->
+        <div class="offer-cell">
+
+          <!--offer header-->
+          <div class="row offer-header" (click)="detailCatalina(item.id,item.title)" style="cursor: pointer;">
+            <!--img col-->
+            <div  class="offer-img-col col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <img class="offer-img-top offer-img" [src]="item.picture_url" title="" [alt]="">
+            </div>
+
+            <!--side col-->
+            <div class="offer-side-col col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <span class=" offer-reduction">-{{item.discount_value| currency : 'EUR' : true}} </span>
+              <h4 class="offer-title">{{item.title}}</h4>
+              <h3 class="offer-text">{{item.subtitle}}... </h3>
+            </div>
+          </div>
+
+          <!--offer footer-->
+          <div class="row offer-footer">
+            <a *ngIf="checkIds(item.id)== false" class="btn btn-profit" (click)="addOffer(item,item.id)">J'en profite</a>
+            <button *ngIf="checkIds(item.id) == true" class="checked" (click)="removeOffer(item.id)" style="margin-top: 4px;"></button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="btn-div-brand">
+    <a  class="retour-btn btn btn-primary" [routerLink]="['/']">Revenir aux offres</a><br>
+  </div>
+</div>

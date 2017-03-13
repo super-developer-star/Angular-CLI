@@ -1,0 +1,30 @@
+<!-- col marge-->
+<!--<div class="offer-col col-lg-6 col-md-6 col-sm-6 col-xs-12">-->
+  <!--cell-->
+  <div class="offer-cell">
+
+    <!--offer header-->
+    <div class="row offer-header" (click)="detailCatalina(offerInfo.id,offerInfo.title)" style="cursor: pointer;">
+      <!--img col-->
+      <div class="offer-img-col col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <img class="offer-img-top offer-img" [src]="offerInfo.picture_url" title="" [alt]="'Coupon réduction' + offerInfo.brand">
+      </div>
+
+      <!--side col-->
+      <div class="offer-side-col col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <span class=" offer-reduction">-{{offerInfo.discount_value| currency : 'EUR' : true}} </span>
+        <h4 class="offer-title">{{offerInfo.title| truncate: 25}}</h4>
+        <h3 class="offer-text">{{offerInfo.subtitle| truncate: 30}}... </h3>
+      </div>
+    </div>
+
+    <!--offer footer-->
+    <div class="row offer-footer">
+      <a *ngIf="checkIds(offerInfo.id)== false" class="btn btn-profit" (click)="addOffer(offerInfo,offerInfo.id)">J'en profite</a>
+      <button *ngIf="checkIds(offerInfo.id) == true" class="checked" (click)="removeOffer(offerInfo.id)" style="margin-top: 14px;"></button>
+    </div>
+
+  </div>
+<!--</div>-->
+
+

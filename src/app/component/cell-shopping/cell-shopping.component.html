@@ -1,0 +1,53 @@
+<!--<div class="offer-col col-lg-6 col-md-6 col-sm-6 col-xs-12" style="cursor: pointer;" (click)="navigateToDetail(offerInfo.id)">-->
+  <!--<div class="offer-cell" >-->
+    <!--<img  class="imgShopping" [src]="offerInfo.picture_url" [alt]="offerInfo.first_store" [title]="titleOffer">-->
+    <!--<div class="shopping-footer ">-->
+
+
+      <!--<div class="col-xs-7 no-pad ">-->
+        <!--<h3 class="offer-shopping-title">{{titleOffer | truncate:15 }}</h3>-->
+        <!--<h4 class="offer-shopping-description" [innerHTML]=" offerInfo.subtitle | truncate: 30" ></h4>-->
+      <!--</div>-->
+
+
+      <!--<div class="col-xs-5 no-pad ">-->
+        <!--<a  class="btn btn-profit">J'en profite</a>-->
+      <!--</div>-->
+
+
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+
+<div class="offer-col" (mouseover)="hoverDisplay='block'; hover=true; " (mouseleave)="hoverDisplay='none'; hover=false; " (click)="navigateToDetail(offerInfo.id)">
+
+
+  <!--cell-->
+  <div class="offer-cell" [ngStyle]="{'background-image': 'url(' + offerInfo.picture_url + ')'}" [ngClass]="{'offer-cell-hover' : hover}">
+    <div class="shopping-footer ">
+
+      <div class="col-xs-7  ">
+        <h4 class="offer-shopping-title">  {{offerInfo.title| truncate: 20}}</h4>
+        <h4 class="offer-shopping-description" [innerHTML]=" description | truncate: 20 ">  </h4>
+
+      </div>
+      <div class="col-xs-5 ">
+        <a  class="btn btn-profit btn-profit2">J'en profite</a>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="text-hover" [ngStyle]="{'display':hoverDisplay }" (mouseover)="hoverDisplay='block'; hover=false; ">
+    <h3 class="blur-title" >{{offerInfo.title}}</h3>
+    <h4 class="blur-description" [innerHTML]=" description | truncate: 200  ">  </h4>
+    <a  class="btn btn-profit btn-hover" [ngStyle]="{'display':hoverDisplay }" (click)="navigateToDetail(offerInfo.offer_id)">J'en profite</a>
+  </div>
+
+
+</div>

@@ -1,0 +1,491 @@
+.first-block{
+    max-height: 500px;
+}
+.second-block{
+    background-color: #FAFAFA;
+    height: 385px;
+    width: 100%;
+    padding-top: 15px;
+  margin-top: 30px;
+}
+.product-img{
+    max-height: 350px;
+    max-width: 100%;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.div-product-info{
+    max-width: 393px;
+}
+
+
+.product-name{
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+    color: black;
+    font-size: 40px;
+    margin-top: 75px;
+}
+.product-discount{
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+    color: black;
+    font-size: 35px;
+    margin-top: -13px;
+}
+.product-desc{
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+    color: #9B9B9B;
+    font-size: 20px;
+    max-height: 196px;
+    word-wrap: break-word;
+    display: inline-block;
+}
+.profite-btn{
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #495EA1;
+    border: none;
+    border-radius: 24px;
+    outline: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 190px;
+    margin-top: 22px;
+    /*margin-bottom: 22px;*/
+}
+.btn:hover, .btn:focus, .btn:active, .btn:visited{
+    opacity: 0.75!important;
+    outline: 0;
+}
+.btn-primary:active:hover{
+    opacity: 0.75!important;
+    outline: 0;
+    background-color: #495EA1;
+}
+.imprimante{
+    width: 304px;
+    height:166px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+.second-txt{
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+.second-desc{
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+    color: #60676C;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+}
+.retour-btn{
+    background-image:url("../../../assets/images/catalina-offer/arrow.png");
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #16232F;
+    border: none;
+    border-radius: 24px;
+    outline: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 289px;
+    margin-top: 35px;
+  background-size: 12px 17px;
+  background-repeat: no-repeat;
+  background-position: 9% 50%;
+}
+.retour-btn.btn-primary:active:hover{
+    opacity: 0.75!important;
+    outline: 0;
+    background-color: black;
+}
+.checked{
+    background-image:url("../../../assets/images/catalina-offer/btn-after.png");
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    margin-top: 22px;
+    /*margin-bottom: 22px;*/
+}
+.checked2{
+  background-image:url("../../../assets/images/catalina-offer/btn-after.png");
+  width: 3vw;
+  height: 3vw;
+  background-size: 100%;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  margin-top: 1vw!important;
+}
+@media (max-width: 699px) {
+  .checked2{
+    height: 8.1vw;
+    width: 8.1vw;
+    margin-top: 2.7vw!important;
+    margin-left: 40%;
+  }
+  .offer-side-col{
+    padding-left: 5%!important;
+  }
+  .div-product-info {
+    max-width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0;
+  }
+  .profite-btn{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: 18px;
+  }
+  .product-desc{
+    font-size: 18px;
+  }
+  .product-name{
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+  .product-discount {
+   font-size: 28px;
+  }
+  .checked{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .imprimante{
+    width: 259px;
+    height:142px;
+  }
+  .second-txt{
+    font-size: 28px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .second-desc{
+    font-size: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .retour-btn{
+    font-size: 22px;
+  }
+}
+/**************************************************offre css********************************************************/
+.offer-col{
+  padding: 0.5%;
+  display: inline-block;
+  float: none;
+  width: 32.33333333%;
+}
+
+.offer-cell {
+  height: 19vw;
+  padding: 0;
+  display: block;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.card-img-top {
+  border-top-right-radius: calc(.25rem - 1px);
+  border-top-left-radius: calc(.25rem - 1px);
+}
+
+.offer-img{
+  width: auto;
+  height: 14vw;
+}
+
+.offer-reduction{
+  font-size: 2.5vw;
+  color: #16232F;
+  font-weight: 600;
+}
+
+
+
+.offer-title {
+  word-wrap: break-word;
+  font-weight: bold;
+  color: #16232F;
+  margin-bottom: .0rem;
+  font-size: 2vw;
+  margin-top: 0;
+}
+
+.offer-text{
+  word-wrap: break-word;
+  font-size: 1.5vw;
+  color: #9B9B9B;
+  margin-top: 5px;
+  font-weight: 300;
+}
+
+.btn-profit {
+  border: none;
+  padding: 0;
+  height: 3vw;
+  margin-left: auto;
+  margin-right: auto;
+  width: 37.5%;
+  min-width: 110px;
+  color: #fff;
+  background-color: #495EA1;
+  border-radius: 76px;
+  font-size: 1.5vw;
+  font-weight: 600;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 3vw;
+  margin-top: 1vw;
+}
+
+.main{
+  margin: auto;
+  width: 62.36%;
+  border: 1px solid black;
+  height: 2000px;
+}
+
+.offer-side-col{
+  /*margin-top: 30px;*/
+  padding: 2% 0 0 0 ;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.offer-img-col{
+  padding: 0;
+}
+
+.offer-header{
+  height: 14vw;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.offer-footer{
+  height: 5vw;
+  padding: 0;
+  margin-right: 0;
+  margin-left: 0;
+  text-align: center;
+}
+.global-related{
+  display: block;
+  overflow-y: auto;
+  text-align: center;
+
+}
+
+/*Media Queries */
+
+@media (max-width: 991px ) {
+  .offer-cell {
+    height: 17vw;
+  }
+
+  .offer-footer{
+    height: 4.49vw;
+  }
+
+  .offer-header{
+    height: 12.59vw;
+  }
+
+  .offer-img{
+    height: 12.59vw;
+  }
+
+  .btn-profit {
+    border: none;
+    height: 2.70vw;
+    font-size: 1.35vw;
+    font-weight: 600;
+    line-height: 2.70vw;
+    margin-top: 0.90vw;
+  }
+
+  .offer-reduction{
+    font-size: 2.25vw;
+    color: #16232F;
+    font-weight: 600;
+  }
+
+  .offer-title {
+    font-weight: bold;
+    color: #16232F;
+    margin-bottom: .0rem;
+    font-size: 1.866vw;
+    margin-top: 0;
+  }
+
+  .offer-text{
+    font-size: 1.386vw;
+    color: #9B9B9B;
+    margin-top: 0;
+  }
+
+
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (max-width: 699px) {
+  .offer-col{
+    padding: 1.5%;
+    display: inline-block;
+    float: none;
+    width: 100%;
+  }
+
+  .offer-cell {
+    height: 51.3vw;
+  }
+
+  .offer-footer{
+    height: 13.5vw;
+  }
+
+  .offer-header{
+    height: 37.8vw;
+  }
+
+  .offer-img{
+    height: 37.8vw;
+  }
+
+  .btn-profit {
+    border: none;
+    height: 8.1vw;
+    font-size: 4.05vw;
+    font-weight: 600;
+    line-height: 8.1vw;
+    margin-top: 2.7vw;
+    margin-left: 40%;
+  }
+
+  .offer-reduction{
+    font-size: 5.75vw;
+    color: #16232F;
+    font-weight: 600;
+  }
+
+  .offer-title {
+    font-weight: bold;
+    color: #16232F;
+    margin-bottom: 1.0rem;
+    font-size: 4.8vw;
+    margin-top: 0;
+  }
+
+  .offer-text{
+    font-size: 3.8vw;
+    color: #9B9B9B;
+    margin-top: 0;
+  }
+
+
+}
+@media (min-width: 1400px) {
+  .global-division{
+    width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .discription-brand-div{
+    width: 100%;
+  }
+  .header-brand{
+    width: 95%;
+    margin-left: 5%;
+  }
+
+  .offer-col{
+    padding: 1.5%;
+    display: inline-block;
+    float: none;
+    width: 33.332%;
+  }
+
+  .offer-cell {
+    height: 266px;
+  }
+
+  .offer-footer{
+    height: 70px;
+  }
+
+  .offer-header{
+    height: 196px;
+  }
+
+  .offer-img{
+    height: 196px;
+  }
+
+  .btn-profit {
+    border: none;
+    height: 42px;
+    font-weight: 600;
+    line-height: 42px;
+    margin-top: 14px;
+    font-size: 21px;
+  }
+
+  .offer-reduction{
+    font-size: 35px;
+    color: #16232F;
+    font-weight: 600;
+  }
+
+  .offer-title {
+    font-weight: bold;
+    color: #16232F;
+    margin-bottom: .0rem;
+    font-size: 28px;
+    margin-top: 0;
+  }
+
+  .offer-text{
+    font-size: 21px;
+    color: #9B9B9B;
+    margin-top: 0;
+  }
+  .checked2{
+    width: 2.3vw;
+    height: 2.3vw;
+    margin-top: 0.9vw!important;
+  }
+}
+
+

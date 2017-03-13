@@ -1,0 +1,337 @@
+.offer-col{
+  //overflow: hidden;
+  //padding: 1.5%;
+  cursor: pointer;
+}
+
+.blur-description{
+  font-size: 1.3vw;
+  margin-left: 5%;
+  width: 90%;
+  font-weight: 300;
+}
+
+.blur-title{
+  font-size: 1.8vw;
+}
+
+
+
+.imgShopping{
+  width: 100%;
+  height: 100%;
+}
+
+.btn-hover{
+  position: absolute!important;
+  left: 30%;
+  bottom: 1vw!important;
+  width: 40%!important;
+}
+
+.text-hover{
+  font-family: "Source Sans Pro"!important;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  position: absolute;
+  text-align: center;
+  top:4%;
+  width: 94%;
+  height: 92%;
+}
+.offer-cell-hover {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+
+
+  -webkit-transition: 0.3s -webkit-filter linear;
+  -moz-transition: 0.3s -moz-filter linear;
+  -moz-transition: 0.3s filter linear;
+  -ms-transition: 0.3s -ms-filter linear;
+  -o-transition: 0.3s -o-filter linear;
+  transition: 0.3s filter linear;
+
+}
+
+
+
+.offer-cell {
+  height: 19vw;
+  padding: 0;
+  display: block;
+  background-color: #fff;
+  //border: 1px solid rgba(0,0,0,.125);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  //background-image: url('../../../assets/images/cell-shopping/nike.jpg') ;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+
+}
+
+
+.shopping-footer{
+  position: absolute;
+  bottom: 0;
+  color: white;
+  height: 5vw;
+  background-color: rgba(0,0,0,0.7);
+  width: 100%;
+
+}
+
+
+.btn-profit {
+  font-family: "Source Sans Pro";
+  padding: 0;
+  height: 3vw;
+  text-align: center;
+  margin-top: 1vw;
+  width: 90%;
+  min-width: 110px;
+  color: #fff;
+  background-color: #495EA1;
+  border-radius: 76px;
+  font-size: 1.5vw;
+  font-weight: 300;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  line-height: 3vw;
+}
+.btn-profit2{
+  margin-left: -6%;
+  font-weight: 500;
+  width: 106%;
+  font-size: 1.3vw;
+}
+.offer-shopping-title{
+  font-family: "Source Sans Pro";
+  height: 3vw;
+  line-height: 3vw;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  font-size: 1.6vw;
+  font-weight: 300;
+
+}
+
+.offer-shopping-description{
+  font-family: "Source Sans Pro";
+  height: 2vw;
+  line-height: 2vh;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1.3vw;
+  font-weight: 300;
+
+}
+
+/*Media Queries */
+//==============================================================================================
+
+@media (max-width: 991px ) {
+  .blur-title{
+    font-size: 2.5vw;
+  }
+
+  .blur-description{
+    font-size: 2vw;
+  }
+  .btn-hover{
+    border: none;
+    height: 42px;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 42px;
+    bottom: 1.6vw!important;
+
+  }
+
+  .offer-cell {
+    height: 25.65vw;
+  }
+
+  .shopping-footer{
+    height: 6.75vw;
+  }
+
+  .btn-profit {
+    font-family: "Source Sans Pro";
+    border: none;
+    height: 4.05vw;
+    font-size: 2.025vw;
+    font-weight: 300;
+    line-height: 4.05vw;
+    margin-top: 1.35vw;
+  }
+
+
+
+
+  .offer-shopping-title{
+    height: 4vw;
+    line-height: 4.05vw;
+    font-size: 2.4vw;
+    margin-left: 1.35vw;
+  }
+
+  .offer-shopping-description{
+    margin-top: -5px;
+    height: 2.7vw;
+    line-height: 2.7vh;
+    font-size: 2vw;
+    margin-left: 1.35vw;
+  }
+
+}
+
+//==========================================================================
+@media (max-width: 699px) {
+  .blur-description{
+    font-size: 4vw;
+  }
+
+  .blur-title{
+    font-size: 5vw;
+  }
+
+
+  .text-hover{
+    color: white;
+    position: absolute;
+    text-align: center;
+    top:3%;
+    width: 97%;
+    height: 94%;
+  }
+
+  .offer-cell {
+    height: 51.3vw;
+  }
+
+  .shopping-footer{
+    height: 13.5vw;
+  }
+
+  .btn-profit {
+    border: none;
+    height: 8.1vw;
+    font-size: 5.05vw;
+    font-weight: 300;
+    line-height: 8.1vw;
+    margin-top: 2.7vw;
+  }
+
+
+
+
+
+  .offer-shopping-title{
+    margin-top: 3px;
+    height: 7vw;
+    line-height: 7vw;
+    font-size: 4.6vw;
+    margin-left: 1.5vw;
+  }
+
+  .offer-shopping-description{
+    margin-top: -2px;
+    height: 6vw;
+    //line-height: 6vh;
+    font-size: 4vw;
+    margin-left: 1.5vw;
+  }
+
+  .btn-hover{
+    height: 8.1vw;
+    font-size: 5.05vw;
+    font-weight: 600;
+    line-height: 8.1vw;
+
+    border: none;
+    bottom: 3vw!important;
+
+  }
+
+
+}
+
+
+
+@media (min-width: 1400px) {
+
+  .offer-cell {
+    height: 265px;
+  }
+
+  .shopping-footer{
+    height: 70px;
+  }
+
+  .btn-profit {
+    border: none;
+    height: 42px;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 42px;
+    margin-top: 14px;
+  }
+
+  .btn-hover{
+    border: none;
+    height: 42px;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 42px;
+    bottom: 16px!important;
+  }
+
+  .blur-description{
+    font-size: 20px;
+
+  }
+
+  .blur-title{
+    font-size: 25px;
+  }
+
+  .offer-shopping-title{
+    margin-top: 5px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 23px;
+    margin-left: 10px;
+  }
+
+  .offer-shopping-description{
+    margin-top: -3px;
+    height: 20px;
+    //line-height: 6vh;
+    font-size: 19px;
+    margin-left: 10px;
+  }
+
+
+}
+
+@media only screen and (min-device-width : 300px) and (max-device-width : 991px) {
+  .text-hover{
+    display: none!important;
+  }
+
+}

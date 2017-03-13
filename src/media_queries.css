@@ -1,0 +1,25 @@
+/*MAX*/
+@media (max-width: 1199px) {}
+
+@media (max-width: 991px ) {}
+
+@media (max-width: 699px) {}
+
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+
+/*interval*/
+@media (min-width: 700px) and (max-width: 991px) {}
+
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+@media (min-width: 700px) and (max-width: 1199px) {}
+
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+
+/*min*/
+@media (min-width: 700px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+

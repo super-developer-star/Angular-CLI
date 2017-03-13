@@ -1,0 +1,51 @@
+.logo{
+  padding-top: 2vh;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 1vh;
+}
+.logo-mobile{
+  padding-top: 2vh;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 2vh;
+}
+.center-title{
+  font-size: 20px;
+  font-family:'Source Sans Pro';
+  font-weight: bold;
+  color: #000;
+  line-height: 1vh;
+  text-align: center;	
+}
+.center-txt{
+  font-size: 12px;
+  font-family:'Source Sans Pro';
+  font-weight: normal;
+  color: #9B9B9B;
+  text-align: center;
+/*  margin-bottom: 20px;	*/
+}
+.download-btn{
+  font-family: 'Source Sans Pro';
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #465FA2;
+  border: none;
+  border-radius: 24px;
+  height: 51px;
+  font-weight: 600; 
+  display: block;
+  margin: 0 auto; 
+  padding-right: 25px;
+  padding-left: 25px;
+}
+.download-btn:focus {outline:0;}
+.center-line{
+  color: #000;
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 600; 
+  text-align: center;
+}

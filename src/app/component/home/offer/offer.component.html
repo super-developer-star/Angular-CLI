@@ -1,0 +1,111 @@
+<div class="offer-pub" [ngStyle]="{'background-image': 'url(' + adURL + ')'}">
+
+
+  <div class="main">
+    <div class="filter">
+      <h2 class="offer-title">{{homePageTitle }}</h2>
+      <h3 class="offer-eco">Économisez jusqu'à {{total | currency : 'EUR' : true}} avec {{offersCatalina.length}}
+        coupons</h3>
+      <br>
+      <a class="btn btn-imprimer" (click)="openPopUp()">TOUT IMPRIMER </a>
+
+      <div class="row">
+
+        <!--dropdown Rayon-->
+        <div class="col-xs-4 no-pad filter-col big-coll1">
+
+          <div class="vertical-fill" (click)="$event.preventDefault()">
+            <!-- Simple dropdown -->
+            <span class="filter-text" dropdown (onToggle)="toggled($event)">
+          <a class="filter-btn" href id="simple-dropdown" dropdownToggle>
+             {{rayon}} <i class="fa fa-angle-down " aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-category" dropdownMenu aria-labelledby="simple-dropdown">
+
+
+
+            <li class="li-item"  (click)="router.navigate(['/']);">
+            <div class="div-dropdown-item div-dropdown-item-left div-dropdown-item-right">
+              <a class="dropdown-item item-left">Tout</a>
+            </div>
+
+
+
+          <li class="li-item" *ngFor="let choice of category " (click)="navigateToFilter(choice.name);">
+            <div class="div-dropdown-item div-dropdown-item-left div-dropdown-item-right">
+              <a class="dropdown-item item-left">{{choice.name}}</a>
+            </div>
+
+          </li>
+          </ul>
+          </span>
+          </div>
+
+        </div>
+
+        <!--dropdown marque-->
+        <div class="col-xs-4 no-pad filter-col small-coll">
+          <div class="vertical-fill" (click)="$event.preventDefault()">
+            <!-- Simple dropdown -->
+            <span class="filter-text" dropdown (onToggle)="toggled($event)">
+            <a class="filter-btn" href id="simple-dropdown" dropdownToggle>
+               MARQUES <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-brand" dropdownMenu aria-labelledby="simple-dropdown">
+            <li class="li-item dropdown-item col-xs-4 col-sm-3" *ngFor="let choice of brand">
+              <div class="div-dropdown-item ">
+                <a class="dropdown-item item-center" (click)="goToBrand(choice.name)">{{choice.name}}</a>
+              </div>
+
+            </li>
+            </ul>
+          </span>
+          </div>
+        </div>
+
+        <!--dropdown types d'offres-->
+        <div class="col-xs-4 no-pad filter-col big-coll2">
+
+          <div class="vertical-fill" (click)="$event.preventDefault()">
+            <!-- Simple dropdown -->
+            <span class="filter-text" dropdown (onToggle)="toggled($event)">
+            <a class="filter-btn" href id="simple-dropdown" dropdownToggle>
+               TOUTES LES OFFRES <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-all" dropdownMenu aria-labelledby="simple-dropdown">
+            <li class="li-item" *ngFor="let choice of offerType" (click)="selectType(choice.id)">
+              <div class="div-dropdown-item div-dropdown-item-right">
+                <a class="dropdown-item item-left">{{choice.name}}</a>
+              </div>
+
+            </li>
+            </ul>
+          </span>
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <div (scroll)="afficher()" class="sss">
+      <h4 class="emptyWarning" *ngIf="mixedOffers.length==0"> Aucune offre disponible dans cette catégorie </h4>
+
+
+      <div class="offer-col col-lg-6 col-md-6 col-sm-6 col-xs-12" *ngFor="let offer of mixedOffers">
+        <app-cell *ngIf="offer.from !=2" [offerInfo]="offer"></app-cell>
+        <app-cell-shopping *ngIf="offer.from==2" [offerInfo]="offer"></app-cell-shopping>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+</div>
+
+

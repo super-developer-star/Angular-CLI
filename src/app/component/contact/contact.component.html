@@ -1,0 +1,56 @@
+
+<div class="container-fluid">
+  <h1 class="title-profile">CONTACT</h1>
+</div>
+<form  class="form-contact" [formGroup]="contactForm" (ngSubmit)="onSubmitContact($event);">
+<div class="div-global">
+  <div class="row">
+    <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
+      <div class="col-sm-6">
+        <div class="form-bottom">
+          <label ></label>
+          <input type="text" placeholder="Prénom et nom" formControlName="name" class="form-control input-height" [ngClass]="{'error-input': nameV || contactForm.controls.name.hasError('required')&&contactForm.controls.name.touched }">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-bottom">
+          <label ></label>
+          <input type="text" placeholder="Email" formControlName="email" class="form-control input-height" [ngClass]="{'error-input': emailV || contactForm.controls.email.hasError('validateEmail') && contactForm.controls.email.touched && contactForm.controls.email.hasError('required') }">
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
+      <div class="col-sm-12">
+        <div class="form-bottom">
+          <label ></label>
+          <input type="text" placeholder="Sujet" formControlName="subject" class="form-control input-height" [ngClass]="{'error-input': subjectV || contactForm.controls.subject.hasError('required')&&contactForm.controls.subject.touched }">
+        </div>
+
+      </div>
+      </div>
+    <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
+      <div class="col-sm-12" style="margin-bottom: 15px;">
+        <div class="form-group">
+          <label for="comment"></label>
+          <textarea class="form-control" rows="11" id="comment" formControlName="message" placeholder="Votre message" [ngClass]="{'error-input': messageV || contactForm.controls.message.hasError('required')&&contactForm.controls.message.touched  }"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
+      <div class="col-sm-12 captcha" style="text-align: center;">
+        <recaptcha
+          (resolved)="resolved($event)"
+          siteKey="6LexSBQUAAAAABgOW3s9omXhq9U9OpFgDR_JUpnr"
+          style="display: inline-block;"></recaptcha>
+      </div>
+
+    </div>
+    <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12 div-btn">
+      <p style="color: red;" *ngIf="errorMessageContact">{{errorMessageContact}}</p>
+      <p style="color: green;" *ngIf="successMessageContact">{{successMessageContact}}</p>
+      <button type="submit" class="fb-inscri-btn btn btn-primary">Envoyer le message</button><br>
+    </div>
+  </div>
+</div>
+</form>
+

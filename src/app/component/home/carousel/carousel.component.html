@@ -1,0 +1,21 @@
+<div class="container-slider">
+
+
+<div class="bgcolor">
+  <h2 class="carousel-title">Promotions à la une</h2>
+
+
+  <div class="cards" (mouseenter)="pauseSlider()" (mouseleave)="startSlider()">
+    <div class="slider2">
+      <div class="card omar" *ngFor="let item of items ; let i = index">
+        <app-cell-slider [offerInfo]="item"> </app-cell-slider>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="slider-offset"></div>
+</div>
+
+
+</div>

@@ -1,0 +1,414 @@
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 58px;
+    padding-right: 58px;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+.error-input{
+  border: 1px solid red!important;
+}
+.coup-red{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+}
+.content-profile{
+    width: 44%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.name-info{
+    padding-top: 2%;
+}
+.title-profile{
+  font-family:'Source Sans Pro';
+  font-weight: 600;
+    font-size: 40px;
+    color: #16232F;
+    margin-bottom: 38px;
+}
+.pad-top{
+    padding-top: 60px;
+}
+.tab-gender{
+    width: 50%;
+    margin-bottom: 17px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+}
+.tab-notif{
+    margin-top: 80px;
+
+}
+.content-notif{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.name{
+  font-family:'Source Sans Pro';
+  font-weight: 700;
+    font-size: 30px;
+    color: #5A70AC;
+    margin-bottom: -4px;
+}
+.remb{
+  font-family:'Source Sans Pro';
+  font-weight: 300;
+    font-size: 20px;
+    color: #B1B1B1;
+}
+input[type=radio].css-checkbox {
+    position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0);
+    height:2px; width:2px; margin:-2px; padding:0; border:0;
+}
+
+input[type=radio].css-checkbox + label.css-label {
+    display:inline-block;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    color: white;
+    padding-top: 18px;
+  font-family:'Source Sans Pro';
+  font-weight: 600;
+    font-size: 20px;
+
+}
+
+input[type=radio].css-checkbox:checked + label.css-label {
+
+    width:100%;
+    height: 82px;
+    background:  #495EA1 url('../../../assets/images/header/CombinedShape.png') no-repeat;
+    background-size: 11px auto;
+    background-position: 49% 54px;
+}
+label.css-label {
+    background-color: #B0B2B8;
+    width:100%;
+    height: 65px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-size: 23px;
+}
+.form-inscri{background-color: #F7F7F7;}
+
+.form-inscri .form-control{
+
+    border: none;
+    color: black;
+    border-radius: 0px;
+    box-shadow:none;
+    opacity: 1;
+    font-size:20px;
+    font-family:'Source Sans Pro';
+    font-weight: 600;
+    font-style:italic;
+    color: #51535D;
+    padding-left: 20px;
+    background:  white url('../../../assets/images/profile/pen.png') no-repeat;
+    background-size: 12px 18px;
+    background-position: 98% 50%;
+}
+
+.form-inscri .form-control:focus{
+    box-shadow:none;
+    opacity: 1;
+}
+.form-inscri .form-control::-webkit-input-placeholder {font-size:20px;font-family:'Source Sans Pro';font-weight: 600;font-style:italic;color: #51535D; }
+.form-inscri .form-control:-moz-placeholder { font-size:20px;font-family:'Source Sans Pro';font-weight: 600;font-style:italic;color: #51535D;}
+.form-inscri .form-control::-moz-placeholder { font-size:20px;font-family:'Source Sans Pro';font-weight: 600;font-style:italic;color: #51535D;}
+.form-inscri .form-control:-ms-input-placeholder { font-size:20px;font-family:'Source Sans Pro';font-weight: 600;font-style:italic;color: #51535D;}
+
+.input-height{
+    height: 70px;
+}
+.input-pwd{
+  background:  white url('../../../assets/images/profile/ic-mdp.png') no-repeat;
+  background-size: 14px 18px;
+  background-position: 98% 50%;
+
+}
+.form-bottom{
+    margin-bottom: -15px;
+}
+.form-bottom2{
+  margin-bottom: 20px;
+}
+.rec-notif{
+  font-family:'Source Sans Pro';
+  font-weight: 300;
+    font-size: 20px;
+    color: #B1B1B1;
+    margin-top: 80px;
+}
+.btn:hover, .btn:focus, .btn:active, .btn:visited{
+    opacity: 0.75!important;
+    outline: 0;
+}
+.fb-inscri-btn{
+  font-family:'Source Sans Pro';
+  font-weight: 600;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #465FA2;
+    border: none;
+    border-radius: 24px;
+    outline: 0;
+    width: 289px;
+}
+
+.fb-inscri-btn.btn-primary:active:hover{
+    opacity: 0.75!important;
+    outline: 0;
+    background-color: #465FA2;
+}
+.retour-btn{
+  background-image:url("../../../assets/images/catalina-offer/arrow.png");
+  font-family:'Source Sans Pro';
+  font-weight: 600;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #16232F;
+    border: none;
+    border-radius: 24px;
+    outline: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 289px;
+    margin-top: 35px;
+  background-size: 12px 17px;
+  background-repeat: no-repeat;
+  background-position: 9% 50%;
+}
+.retour-btn.btn-primary:active:hover{
+    opacity: 0.75!important;
+    outline: 0;
+    background-color: black;
+}
+
+input[type=radio].css-checkbox2 {
+    position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0);
+    height:2px; width:2px; margin:-2px; padding:0; border:0;
+}
+
+input[type=radio].css-checkbox2 + label.css-label2 {
+    padding-left:35px;
+    height:33px;
+    display:inline-block;
+    background-repeat:no-repeat;
+    background-position: 0 4px;
+    vertical-align:middle;
+    cursor:pointer;
+    font-size: 20px;
+  font-family:'Source Sans Pro';
+  font-weight: 300;
+    font-weight: lighter;
+    color: #B1B1B1;
+    padding-right: 45px;
+}
+input[type=radio].css-checkbox2 + label.css-label22 {
+    padding-left:35px;
+    height:33px;
+    display:inline-block;
+    background-repeat:no-repeat;
+    background-position: 0 4px;
+    vertical-align:middle;
+    cursor:pointer;
+    font-size: 20px;
+  font-family:'Source Sans Pro';
+  font-weight: 300;
+    font-weight: lighter;
+    color: #B1B1B1;
+    padding-right: 0px;
+}
+input[type=radio].css-checkbox2:checked + label.css-label2 {
+    background-position: 0 -25px;
+    color: #FF614D;
+}
+label.css-label2 {
+    background: transparent url('../../../assets/images/profile/radio-notif.png') no-repeat;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-size: 22px;
+}
+.left-block{
+    padding-left: 0;
+    padding-right: 50px;
+    padding-top: 20px;
+}
+.right-block{
+    margin-left: -38px;
+    margin-top: 123px;
+    padding-right: 50px;
+}
+
+.solde-diff-zero{
+  position: relative;
+  display: table;
+  height: 110px;
+  width:266px;
+  background: url('../../../assets/images/profile/econo.png') no-repeat top center ;
+  background-size: 100% auto;
+}
+.overlay {
+  display: table-cell;
+  vertical-align: middle;
+}
+.overlay > p {
+  text-align: center;
+  color: #495EA1;
+  font-size: 60px;
+  line-height: 2;
+  padding: 0 10%;
+  font-family:'Source Sans Pro';
+  font-weight: 600;
+}
+
+.form-inscri2{background-color: #F7F7F7;height: 614px;}
+
+.form-inscri2 .form-control{
+
+  border: none;
+  color: black;
+  border-radius: 0px;
+  box-shadow:none;
+  opacity: 1;
+  font-size:20px;font-family:'Source Sans Pro';font-weight: 600;font-style:italic;color: #51535D;
+  padding-left: 20px;
+
+}
+
+.form-inscri2 .form-control:first-child{
+
+}
+.form-inscri2 .form-control:focus{
+  box-shadow:none;
+  opacity: 1;
+}
+.form-inscri2 .form-control::-webkit-input-placeholder {font-size:20px;font-family:'Source Sans Pro';font-weight: 600;font-style:italic;color: #51535D; }
+.form-inscri2 .form-control:-moz-placeholder { font-size:20px;font-family:'Source Sans Pro';font-weight: 600;font-style:italic;color: #51535D;}
+.form-inscri2 .form-control::-moz-placeholder { font-size:20px;font-family:'Source Sans Pro';font-weight: 600;font-style:italic;color: #51535D;}
+.form-inscri2 .form-control:-ms-input-placeholder { font-size:20px;font-family:'Source Sans Pro';font-weight: 600;font-style:italic;color: #51535D;}
+
+
+/********************************************************Media queryy***********************************************
+*******************************************************************************************************************/
+@media (min-width: 700px) and (max-width: 1199px) {
+  .coup-red{
+    width:80%;
+  }
+  .content-profile{
+    width: 70%;
+  }
+  .content-notif{
+    margin-left: 50px;
+  }
+
+
+}
+@media (max-width: 699px) {
+  .coup-red{
+    width:100%;
+  }
+  .content-profile{
+    width: 100%;
+  }
+  .content-notif{
+    width: 100%;
+  }
+    .center-image{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .container-fluid {
+        text-align: center;
+    }
+    .title-profile{
+        font-size: 28px;
+    }
+    .pad-top{
+        padding-top: 0px;
+    }
+    .name-info{
+        text-align: center;
+    }
+    .name{
+        font-size: 28px;
+        margin-bottom: 0px;
+    }
+    .remb{
+        font-size: 18px;
+    }
+    .left-block{
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 10px;
+    }
+    .right-block{
+        margin-left: 0px;
+        margin-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .tab-gender{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .rec-notif{
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-top: 35px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .tab-notif{
+        margin-top: 20px;
+    }
+    .fb-inscri-btn{
+        width: 202px;
+        font-size: 18px;
+    }
+    .retour-btn{
+        width: 202px;
+        font-size: 18px;
+    }
+    .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
+        padding: 0;
+        margin: 0;
+    }
+    .form-bottom {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+  .form-bottom2 {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+    .tab-notif{
+        margin: 0 auto;
+        text-align:center;
+        margin-top: 15px;
+    }
+  .form-inscri2{background-color: #F7F7F7;height: auto;}
+
+}

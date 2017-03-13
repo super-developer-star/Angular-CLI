@@ -1,0 +1,399 @@
+.offer-col{
+  padding: 1.5%;
+  padding-bottom: 0;
+  padding-top: 0;
+  cursor: pointer;
+}
+.footer-left{
+  padding-left: 10px;
+  padding-right: 0;
+}
+
+.blur-description{
+  margin-left: 5%;
+  width: 90%;
+  font-size: 1.5vw;
+  font-weight: 300;
+}
+.blur-title{
+  font-size: 2vw;
+}
+
+.offer-shopping-title{
+  font-family: "Source Sans Pro";
+  height: 3vw;
+  line-height: 3vw;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  font-size: 1.6vw;
+
+}
+
+.offer-shopping-description{
+  font-family: "Source Sans Pro";
+  height: 2vw;
+  line-height: 2vh;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1.3vw;
+
+}
+
+
+
+.btn-hover{
+  position: absolute!important;
+  left: 30%;
+  bottom: 1.5vw!important;
+  width: 40%!important;
+}
+
+.text-hover{
+  z-index: 3000;
+  padding: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.6);
+  font-family: "Source Sans Pro"!important;
+  color: white;
+  position: absolute;
+  width: 31.5vw;
+  height: 19vw;
+  //top:3vw;
+  text-align: center;
+}
+
+
+
+.offer-cell {
+  height: 19vw;
+  padding: 0;
+  position: relative;
+  display: block;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.125);
+  background-image: url('../../../assets/images/cell-shopping/nike.jpg') ;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  //overflow: hidden;
+}
+.offer-cell-hover {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+
+
+  -webkit-transition: 0.2s -webkit-filter linear;
+  -moz-transition: 0.2s -moz-filter linear;
+  -moz-transition: 0.2s filter linear;
+  -ms-transition: 0.2s -ms-filter linear;
+  -o-transition: 0.2s -o-filter linear;
+  transition: 0.2s filter linear;
+
+}
+
+.card-img-top {
+  border-top-right-radius: calc(.25rem - 1px);
+  border-top-left-radius: calc(.25rem - 1px);
+}
+
+.offer-img{
+  width: 100%!important;
+}
+
+.offer-reduction{
+  /*font-size: 40px; will generate bug */
+  font-size: 29px;
+  color: #16232F;
+  font-weight: 600;
+}
+
+.offer-block-btn {
+  /*padding-bottom: 1.5rem;*/
+  /*margin-top: 10px;*/
+  padding-bottom: 1rem;
+  margin-top: 0;
+}
+
+
+.shopping-footer{
+  color: white;
+  height: 5vw;
+  position: absolute;
+  bottom: 0;
+
+
+  background-color: rgba(0,0,0,0.7);
+  width: 100%;
+}
+
+
+
+
+.offer-title {
+  /*margin-bottom: .75rem;*/
+  /*font-size: 19px;*/
+  font-weight: bold;
+  color: #16232F;
+  margin-bottom: .0rem;
+  font-size: 21px;
+  margin-top: 0;
+}
+
+.offer-text{
+  font-size: 18px;
+  color: #9B9B9B;
+  font-weight: 300;
+}
+
+
+.btn-profit {
+  font-family: "Source Sans Pro";
+  height: 2.5vw;
+  text-align: center;
+  margin-top: 1.25vw;
+  width: 100%;
+  min-width: 120px;
+  color: #fff;
+  background-color: #495EA1;
+  border-radius: 76px;
+  font-size: 19px;
+  font-weight: 300;
+  position: relative;
+  line-height: 1.25vw;
+
+}
+
+
+.main{
+  margin: auto;
+  width: 62.36%;
+  border: 1px solid black;
+  height: 2000px;
+}
+
+.offer-side-col{
+  /*margin-top: 30px;*/
+  padding: 5px 0 0 0 ;
+  margin-top: 10px;
+}
+
+.offer-img-col{
+  padding: 0;
+}
+
+.offer-header{
+  padding: 0;
+  margin: 0;
+}
+
+.offer-footer{
+  height: 4.25vw;
+  padding: 0;
+  margin: 0;
+}
+
+.offer-description-col{
+  margin-top: -4vw;
+  height: 3vw;
+}
+
+//media queries
+
+
+
+@media (max-width: 991px ) {
+
+
+
+  .blur-description{
+    font-size: 2.5vw;
+  }
+  .blur-title{
+    font-size: 3vw;
+  }
+
+  .shopping-footer{
+    position: absolute;
+    bottom: 0;
+  }
+
+
+  .text-hover{
+    width: 48vw;
+    height: 26vw;
+  }
+
+  .offer-cell {
+    height: 25.65vw;
+  }
+
+  .shopping-footer{
+    height: 6.75vw;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .btn-profit {
+    padding: 0;
+    border: none;
+    height: 4.05vw;
+    font-size: 2.025vw;
+    font-weight: 300;
+    line-height: 4.05vw;
+    margin-top: 1.35vw;
+  }
+
+
+
+
+  .offer-shopping-title{
+    height: 3.6vw;
+    line-height: 3.6vw;
+    font-size: 2.2vw;
+    margin-left: 1.35vw;
+  }
+
+  .offer-shopping-description{
+    height: 2.4vw;
+    line-height: 2.4vh;
+    font-size: 1.755vw;
+    margin-left: 1.35vw;
+  }
+
+}
+
+@media (max-width: 699px) {
+  .blur-description{
+    font-size: 4.5vw;
+  }
+  .blur-title{
+    font-size: 5.5vw;
+  }
+
+  .text-hover{
+    width: 96vw;
+    height: 50vw;
+  }
+
+
+  .shopping-footer{
+    position: absolute;
+    bottom: 0;
+    height: 13.5vw;
+  }
+
+  .offer-cell {
+    height: 51.3vw;
+  }
+
+
+
+  .btn-profit {
+    min-width: 100px;
+    border: none;
+    height: 8.1vw;
+    font-size: 5.05vw;
+    font-weight: 300;
+    line-height: 8.1vw;
+    margin-top: 2.7vw;
+  }
+
+  .offer-shopping-title{
+    height: 7.5vw;
+    line-height: 7.5vw;
+    font-size: 4.2vw;
+    margin-left: 2.7vw;
+  }
+
+  .offer-shopping-description{
+    height: 6vw;
+    //line-height: 6vh;
+    font-size: 3.5vw;
+    margin-left: 2.7vw;
+  }
+
+
+}
+
+
+@media (min-width: 1400px) {
+  .blur-description{
+    font-size: 20px;
+  }
+  .blur-title{
+    font-size: 25px;
+  }
+
+  .offer-col{
+    width: 464px;
+    padding: 1.5%;
+    padding-bottom: 0;
+    padding-top: 0;
+    cursor: pointer;
+  }
+  .offer-cell {
+    height: 264px;
+    width: 456.6666px;
+  }
+
+  .shopping-footer{
+    height: 70px;
+  }
+
+  .btn-profit {
+    border: none;
+    height: 42px;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-top: 14px;
+  }
+
+  .btn-hover{
+    border: none;
+    height: 42px;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 32px;
+    bottom: 16px!important;
+  }
+
+  .offer-shopping-title{
+    font-weight: 300;
+    height: 41px;
+    line-height: 41px;
+    font-size: 25px;
+    margin-left: 10px;
+  }
+
+  .offer-shopping-description{
+    font-weight: 300;
+    height: 20px;
+    font-size: 19px;
+    margin-left: 10px;
+  }
+
+  .text-hover{
+    top:2px;
+    width: 450px;
+    height: 266px;
+
+  }
+
+
+}
+
+@media only screen and (min-device-width : 300px) and (max-device-width : 991px) {
+  .text-hover{
+    display: none!important;
+  }
+
+}

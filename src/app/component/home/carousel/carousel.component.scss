@@ -1,0 +1,156 @@
+///* ==========================================================================
+//   TF1-CSS
+//   ========================================================================== */
+.bgcolor{
+  width: 100%;
+  height: auto;
+  background-color: #F7F7F7;
+}
+.slider-offset{
+  height: 50px;
+}
+
+.cards {
+  position: relative;
+  background-color: white;
+  padding: 5px;
+  height: 20vw;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+div.slider2 {
+  transition: transform .3s ease-out;
+  will-change: transform;
+  overflow-y: auto;
+}
+
+div.slider2.no-transition {
+  transition: none !important;
+}
+
+div.card {
+  float: left;
+  line-height: 100%;
+  height: auto;
+  //border: 3px solid #fff;
+  width: 33.3333vw;
+  //background: #03a9f4;
+  box-sizing: border-box;
+}
+
+div.card span {
+  display: block;
+  width: 80px;
+  margin: 0 auto;
+  height: 80px;
+  line-height: 80px;
+  font-size: 50pt;
+  text-align: center;
+  color: #fff;
+  //background: #2196f3;
+  border-radius: 50%;
+  margin-top: 40px;
+}
+
+.responsive-img-slide{
+  width: 100%;
+  height: auto;
+}
+
+.catalina-slider2{
+  max-height: 25vw!important;
+}
+.carousel-title{
+  margin: 0;
+  height: 160px;
+  line-height: 160px;
+  text-align: center;
+  font-weight: bold;
+  color: #465FA2;
+  font-size: 40px;
+  text-transform: uppercase;
+
+
+}
+
+@media (max-width: 1399px ) {
+  .cards {
+    height: 19.9vw;
+
+  }
+  .carousel-title{
+    height: 150px;
+    line-height: 150px;
+
+  }
+
+}
+
+
+
+
+
+
+@media (max-width: 991px ) {
+
+
+  div.card {
+    width: 50vw;
+  }
+
+  .carousel .carousel-item {
+    width: 50vw;
+  }
+
+  .cards {
+    height: 27.1vw;
+
+  }
+
+}
+
+@media (max-width: 699px) {
+
+    .carousel-title{
+      height: 120px;
+      line-height: 120px;
+      font-size: 30px;
+
+    }
+
+
+
+  .cards {
+    height: 52.8vw;
+  }
+
+  .carousel .carousel-item {
+    width: 100vw;
+  }
+
+  div.card {
+    width: 97vw;
+  }
+}
+
+
+
+@media (min-width: 1400px) {
+  .carousel .carousel-item {
+    width: 100%;
+  }
+  div.card {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 466.666px;
+    overflow-x: hidden;
+
+  }
+  .cards {
+    height: 274px;
+
+  }
+
+}
+

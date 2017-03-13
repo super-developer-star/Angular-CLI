@@ -1,0 +1,12 @@
+<div class="main" >
+  <div class="filter">
+    <h2 class="offer-title">TOUTES LES OFFRES</h2>
+    <br>
+  </div>
+  <div>
+    <div class="offer-col col-lg-6 col-md-6 col-sm-6 col-xs-12"   *ngFor="let offer of shop" >
+      <app-cell-shopping  [offerInfo]="offer"></app-cell-shopping>
+    </div>
+  </div>
+
+</div>

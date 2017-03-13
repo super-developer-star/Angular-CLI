@@ -1,0 +1,27 @@
+.vertical-offset{
+  height:118px ;
+}
+@media (max-width: 699px) {
+  .vertical-offset{
+    height:307px;
+    /*height:332px;*/
+    /*height: 293px;*/
+}
+
+}
+
+/*@media only screen and (min-device-width : 300px) and (max-device-width : 699px) {
+.global{
+  display: block;
+}
+}*/
+@media only screen and (max-device-width : 300px) {
+.global{
+  display: block;
+}
+}
+@media only screen and (min-device-width : 301px){
+.global{
+	display: none;
+}
+}

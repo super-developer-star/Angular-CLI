@@ -1,0 +1,303 @@
+.offer-col{
+  padding: 1.5%;
+}
+.checked{
+  background-image:url("../../../assets/images/catalina-offer/btn-after.png");
+  width: 3vw;
+  height: 3vw;
+  background-size: 100%;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  margin-top: 1vw!important;
+}
+.offer-cell {
+  height: 19vw;
+  padding: 0;
+  display: block;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.card-img-top {
+  border-top-right-radius: calc(.25rem - 1px);
+  border-top-left-radius: calc(.25rem - 1px);
+}
+
+.offer-img{
+  width: auto;
+  height: 14vw;
+}
+
+.offer-reduction{
+  font-size: 2.5vw;
+  color: #16232F;
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+}
+
+
+
+.offer-title {
+  word-wrap: break-word;
+  font-weight: bold;
+  color: #16232F;
+  margin-bottom: .0rem;
+  font-family: "Source Sans Pro";
+  font-size: 2vw;
+  margin-top: 0;
+}
+
+.offer-text{
+  word-wrap: break-word;
+  font-size: 1.5vw;
+  color: #9B9B9B;
+  margin-top: 5px;
+  font-weight: 300;
+}
+
+.btn-profit {
+  border: none;
+  padding: 0;
+  height: 3vw;
+  margin-left: auto;
+  margin-right: auto;
+  width: 37.5%;
+  min-width: 110px;
+  color: #fff;
+  background-color: #495EA1;
+  border-radius: 76px;
+  font-size: 1.5vw;
+  font-weight: 600;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 3vw;
+  margin-top: 1vw;
+  font-family: "Source Sans Pro";
+}
+
+.main{
+  margin: auto;
+  width: 62.36%;
+  border: 1px solid black;
+  height: 2000px;
+}
+
+.offer-side-col{
+  /*margin-top: 30px;*/
+  padding: 2% 0 0 0 ;
+  margin-top: 10px;
+}
+
+.offer-img-col{
+  padding: 0;
+}
+
+.offer-header{
+  height: 14vw;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.offer-footer{
+  height: 5vw;
+  padding: 0;
+  margin-right: 0;
+  margin-left: 0;
+  text-align: center;
+}
+
+/*Media Queries */
+
+@media (max-width: 991px ) {
+  .offer-cell {
+    height: 25.65vw;
+  }
+
+  .offer-footer{
+    height: 6.75vw;
+  }
+
+  .offer-header{
+    height: 18.9vw;
+  }
+
+  .offer-img{
+    height: 18.9vw;
+  }
+
+  .btn-profit {
+    border: none;
+    height: 4.05vw;
+    font-size: 2.025vw;
+    font-weight: 600;
+    line-height: 4.05vw;
+    margin-top: 1.35vw;
+  }
+
+
+  .checked{
+    height: 4.05vw;
+    width: 4.05vw;
+    margin-top: 1.35vw!important;
+  }
+
+
+
+
+  .offer-reduction{
+    font-size: 3.375vw;
+    color: #16232F;
+    font-weight: 600;
+  }
+
+  .offer-title {
+    font-weight: bold;
+    color: #16232F;
+    margin-bottom: .0rem;
+    font-size: 2.8vw;
+    margin-top: 0;
+  }
+
+  .offer-text{
+    font-size: 2.1vw;
+    color: #9B9B9B;
+    margin-top: 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (max-width: 699px) {
+
+  .offer-cell {
+    height: 51.3vw;
+  }
+
+  .offer-footer{
+    height: 13.5vw;
+  }
+
+  .offer-header{
+    height: 37.8vw;
+  }
+
+  .offer-img{
+    height: 37.8vw;
+  }
+
+  .btn-profit {
+    border: none;
+    height: 8.1vw;
+    font-size: 5.05vw;
+    font-weight: 600;
+    line-height: 8.1vw;
+    margin-top: 2.7vw;
+  }
+
+  .checked{
+    height: 8.1vw;
+    width: 8.1vw;
+    margin-top: 2.7vw!important;
+  }
+
+
+
+  .offer-reduction{
+    font-size: 6.75vw;
+    color: #16232F;
+    font-weight: 600;
+  }
+
+  .offer-title {
+    font-weight: bold;
+    color: #16232F;
+    margin-bottom: .0rem;
+    font-size: 5.8vw;
+    margin-top: 0;
+  }
+
+  .offer-text{
+    font-size: 4.2vw;
+    color: #9B9B9B;
+    margin-top: 0;
+  }
+
+
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+@media (min-width: 1400px) {
+
+  .offer-cell {
+    height: 265px;
+  }
+
+  .offer-footer{
+    height: 70px;
+  }
+
+  .offer-header{
+    height: 195px;
+  }
+
+  .offer-img{
+    height: 195px;
+  }
+
+  .btn-profit {
+    border: none;
+    height: 42px;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 42px;
+    margin-top: 14px;
+  }
+
+  .checked{
+    height: 40px;
+    width: 40px;
+    margin-top: 12px!important;
+  }
+
+
+
+  .offer-reduction{
+    font-size: 29px;
+    color: #16232F;
+    font-weight: 600;
+  }
+
+  .offer-title {
+    font-weight: bold;
+    color: #16232F;
+    margin-bottom: .0rem;
+    font-size: 21px;
+    margin-top: 0;
+  }
+
+  .offer-text{
+    font-size: 19px;
+    color: #9B9B9B;
+    margin-top: 0;
+  }
+
+}

@@ -1,0 +1,76 @@
+<div class="global-division">
+<div class="container-fluid">
+<!--<table>-->
+  <!--<tr *ngFor="let offer of offers">-->
+    <!--<td>{{offer.price}}</td>-->
+    <!--<td><button *ngIf="checkIds(offer.id) == false" (click)="addOffer(offer,offer.id)">+</button></td>-->
+    <!--<td><button *ngIf="checkIds(offer.id) == true" (click)="removeOffer(offer.id)">-</button></td>-->
+  <!--</tr>-->
+<!--</table>-->
+<div class="row first-block" >
+    <div class="col-xs-12 col-lg-12 col-sm-12 col-md-12">
+       <div class="col-xs-12 col-lg-6 col-sm-6 col-md-6" >
+        <img src="{{picture_url}}" class="product-img" >
+        </div>
+        <div class="col-xs-12 col-lg-6 col-sm-6 col-md-6 div-product-info">
+            <h1 >
+              <span class="product-name"> COUPONS {{title| uppercase}}</span> <br><br>
+              <span class="product-discount">-{{discount_value| currency : 'EUR' : true}} de réduction</span>
+
+            </h1>
+            <p class="product-desc">{{subtitle}}</p><br>
+            <button *ngIf="checkIds(offer_id)== false" class="profite-btn btn btn-primary" (click)="addOffer(offerTab,offer_id)" >J'en profite</button>
+            <button *ngIf="checkIds(offer_id) == true" class="checked" (click)="removeOffer(offer_id)"></button>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div  class="second-block">
+
+<img src="../../../assets/images/catalina-offer/imprimante.png" class="imprimante">
+    <h2 class="second-txt">Comment profiter de ce bon de réduction ?</h2>
+    <p class="second-desc">Appuyez sur j’en profite pour ajouter ce coupon à votre sélection.<br>
+        Ils vous suffira ensuite d’imprimer vos coupons pour en profiter lors de vos achats</p>
+
+</div>
+
+<div class="" style="margin-bottom: 20px;" *ngIf="relatedTab.length!=0">
+    <h2 class="second-txt">Autres offres de la marque</h2>
+  <div class="global-related">
+  <!-- col marge-->
+  <div *ngFor="let item of relatedTab ;" class="offer-col col-lg-4 col-md-4 col-sm-4 col-xs-12">
+    <!--cell-->
+    <div class="offer-cell">
+
+      <!--offer header-->
+      <div class="row offer-header" (click)="detailCatalina(item.id,item.title)" style="cursor: pointer;">
+        <!--img col-->
+        <div  class="offer-img-col col-lg-6 col-md-6 col-sm-6 col-xs-6">
+          <img class="offer-img-top offer-img" [src]="item.picture_url" title="" [alt]="">
+        </div>
+
+        <!--side col-->
+        <div class="offer-side-col col-lg-6 col-md-6 col-sm-6 col-xs-6">
+          <span class=" offer-reduction">-{{item.discount_value| currency : 'EUR' : true}} </span>
+          <h3 class="offer-title">{{item.title}}</h3>
+          <h4 class="offer-text">{{item.subtitle | truncate: 60: '...': true}} </h4>
+        </div>
+      </div>
+
+      <!--offer footer-->
+      <div class="row offer-footer">
+        <a *ngIf="checkIds(item.id)== false" class="btn btn-profit" (click)="addOffer(item,item.id)">J'en profite</a>
+        <button *ngIf="checkIds(item.id) == true" class="checked2" (click)="removeOffer(item.id)" style="margin-top: 14px;"></button>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</div>
+<div class="container-fluid" style="background-color: #fafafa;height: 117px;text-align: center;">
+    <button class="retour-btn btn btn-primary" [routerLink]="['/']">Revenir aux offres</button>
+    </div>
+</div>

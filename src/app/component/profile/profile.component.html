@@ -1,0 +1,190 @@
+
+<div class="container-fluid" (click)="onBlurDatePick()">
+<h1 class="title-profile">MON COMPTE</h1>
+</div>
+  <tabset (click)="onBlurDatePick()">
+    <tab heading='Mes infos'>
+      <form class="form-inscri"  [formGroup]="profileForm" (ngSubmit)="onSubmitProfile($event);">
+        <!--
+        <div class="coup-red">
+          <div class="row">
+            <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
+              <div class="col-sm-4">
+                <div *ngIf="solde()==0"  class="solde-zero">
+                  <img src="../../../assets/images/profile/solde-zero.png" class="img-responsive center-image" width="226" height="150">
+                </div>
+                <div *ngIf="solde()!=0" class="solde-diff-zero">
+                  <div class='overlay'>
+                    <p>5,56€</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-8 name-info">
+                <p class="name">{{firstnameTitle | upperfirst}} {{lastnameTitle | upperfirst}}</p>
+                <p *ngIf="solde()==0" class="remb">Vous n'avez pas encore de remboursements</p>
+                <p *ngIf="solde()!=0" class="remb">Vous avez profité de 18 offres</p>
+              </div>
+              </div>
+        </div>
+          </div>
+        -->
+       <div class="content-profile">
+
+           <div class="row">
+
+               <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
+                 <div class="name-info">
+                 <p class="name">{{firstnameTitle | upperfirst}} {{lastnameTitle | upperfirst}}</p>
+                 <!--<p *ngIf="solde()==0" class="remb">Vous n'avez pas encore de remboursements</p>
+                 <p *ngIf="solde()!=0" class="remb">Vous avez profité de 18 offres</p>-->
+               </div>
+                 <table class="tab-gender">
+                   <tr>
+                     <td style="width: 50%;text-align: center;"><input type="radio" name="gender" id="radio3" class="css-checkbox"  value="2" formControlName="gender"/>
+                       <label for="radio3" class="css-label radGroup1">Madame</label>
+                     </td>
+                     <td style="width: 50%;text-align: center;"><input type="radio" name="gender" id="radio4" class="css-checkbox"  value="1" formControlName="gender"/>
+                       <label for="radio4" class="css-label radGroup1">Monsieur</label>
+                     </td>
+                   </tr>
+                 </table>
+                 <div class="form-bottom">
+                   <label ></label>
+                   <input type="text" placeholder="Prénom*" class="form-control input-height" formControlName="firstname" [ngClass]="{'error-input': firstnameV }">
+                 </div>
+                 <div class="form-bottom">
+                   <label ></label>
+                   <input type="text" placeholder="Nom*" class="form-control input-height" formControlName="lastname" [ngClass]="{'error-input': lastnameV }">
+                 </div>
+                 <div class="form-bottom">
+                   <label ></label>
+                   <input type="text" readonly="readonly" [value]="profileForm.controls.customDatepickerValue.value"  placeholder="Date de naissance*" (focus)="openDatePick()" (click)="strrop($event)" (keydown)="keystop($event)" class="form-control input-height" formControlName="birthday" >
+                   <custom-datepicker formControlName="customDatepickerValue" [hidden]="!openCalendar" (click)="strrop($event)"></custom-datepicker>
+                 </div>
+                 <!--
+                 <div class="form-bottom">
+                   <label ></label>
+                   <input type="text"  placeholder="Code postal*" class="form-control input-height"  formControlName="postcode" [ngClass]="{'error-input': postcodeV }">
+                 </div>
+                 -->
+                 <div class="form-bottom">
+                   <label ></label>
+                   <input type="text" placeholder="Mail*" disabled class="form-control input-height" formControlName="email">
+                 </div>
+               </div>
+
+           </div>
+       </div>
+        <div class="content-notif">
+          <div class="row" style="margin: 0;">
+          <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12 div-notif" >
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12"> <p class="rec-notif">Recevoir les offres des partenaires par mail et / ou par SMS géolocalisé: </p></div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+              <table  class="tab-notif">
+                <tr>
+                  <td ><input type="radio" name="partner" id="radio5" class="css-checkbox2" value="false" formControlName="partner"/>
+                    <label for="radio5" class="css-label2 radGroup2">Non</label>
+                  </td>
+                  <td ><input type="radio" name="partner" id="radio6" class="css-checkbox2" value="true" formControlName="partner"/>
+                    <label for="radio6" class="css-label2 css-label22 radGroup2">Oui</label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin: 0;">
+          <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12" style="text-align: center;margin-top: 55px;">
+            <p style="color: red;" *ngIf="errorMessageInfos">{{errorMessageInfos}}</p>
+            <p style="color: green;" *ngIf="successMessageInfos">{{successMessageInfos}}</p>
+            <button type="submit" class="fb-inscri-btn btn btn-primary">Mettre à jour</button><br>
+            <button class="retour-btn btn btn-primary" [routerLink]="['/']">Revenir aux offres</button><br><br><br>
+          </div>
+        </div>
+      </form>
+    </tab>
+    <tab [active]="adresseVide">
+      <template tabHeading>Mon adresse</template>
+
+      <form class="form-inscri" style="padding-top:15px;" [formGroup]="adresseForm" (ngSubmit)="onSubmitAdresse($event);">
+      <div class="content-profile">
+
+        <div class="row">
+
+          <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
+            <div class="form-bottom">
+              <label ></label>
+              <input type="text" placeholder="Adresse" class="form-control input-height" formControlName="street">
+            </div>
+            <div class="form-bottom">
+              <label ></label>
+              <input type="text" placeholder="Complément" class="form-control input-height" formControlName="street_bis">
+            </div>
+            <div class="form-bottom">
+              <label ></label>
+              <input type="text"  placeholder="Code postal"  class="form-control input-height" formControlName="postcode" [ngClass]="{'error-input': postcodeV }">
+            </div>
+            <div class="form-bottom">
+              <label ></label>
+              <input type="text"  placeholder="Ville" class="form-control input-height" formControlName="city">
+            </div>
+            <div class="form-bottom">
+              <label ></label>
+              <select class="form-control input-height" id="country" formControlName="country" >
+                <option value="" disabled selected hidden>Pays</option>
+                <option *ngFor="let key of arrayOfKeys" value="{{countryTab[key].country_name_fr}}">{{countryTab[key].country_name_fr}}</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+      </div>
+        <div class="row" style="margin: 0;">
+          <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12" style="text-align: center;margin-top: 55px;">
+            <p style="color: red;" *ngIf="errorMessageAdr">{{errorMessageAdr}}</p>
+            <p style="color: green;" *ngIf="successMessageAdr">{{successMessageAdr}}</p>
+            <button type="submit" class="fb-inscri-btn btn btn-primary">Mettre à jour</button><br>
+            <button class="retour-btn btn btn-primary" [routerLink]="['/']"> Revenir aux offres</button><br><br><br>
+          </div>
+        </div>
+      </form>
+    </tab>
+    <tab>
+      <template tabHeading>Mon mot de passe</template>
+      <form class="form-inscri2" style="padding-top:15px;" [formGroup]="passwordForm" (ngSubmit)="onSubmitPassword($event);">
+        <div class="content-profile">
+
+          <div class="row">
+
+            <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
+              <div class="form-bottom2">
+                <label ></label>
+                <input type="password" placeholder="Ancien mot de passe" class="form-control input-height input-pwd" formControlName="password" [ngClass]="{'error-input': passwordV }">
+              </div>
+              <div class="form-bottom">
+                <label ></label>
+                <input type="password" placeholder="Nouveau mot de passe" class="form-control input-height" formControlName="newPassword" [ngClass]="{'error-input': password1V }" >
+              </div>
+              <div class="form-bottom">
+                <label ></label>
+                <input type="password"  placeholder="Saisir à nouveau" class="form-control input-height" formControlName="newPassword2" [ngClass]="{'error-input': password2V }">
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="row" style="margin: 0;">
+          <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12" style="text-align: center;margin-top: 55px;">
+            <p style="color: red;" *ngIf="errorMessagePwd">{{errorMessagePwd}}</p>
+            <p style="color: red;" *ngIf="password1V||passwordV">Votre mot de passe doit contenir au moins 6 caractères</p>
+            <p style="color: red;" *ngIf="password3V">La confirmation du mot de passe n'est pas conforme au premier mot de passe saisi</p>
+            <p style="color: green;" *ngIf="successMessagePwd">{{successMessagePwd}}</p>
+            <button type="submit" class="fb-inscri-btn btn btn-primary">Changer</button><br>
+            <button class="retour-btn btn btn-primary" [routerLink]="['/']" >Revenir aux offres</button><br><br><br>
+          </div>
+        </div>
+      </form>
+    </tab>
+  </tabset>

@@ -1,0 +1,996 @@
+header{
+    /*jj */
+    margin-top: -92px;
+    height: 92px;
+    /*width: 1400px;*/
+    /*display: inline-flex;*/
+    /*align-items: center;*/
+  width: 100vw;
+    display: table;
+  position: fixed;
+  background-color: white;
+  z-index: 1000;
+  /*max-width: 1400px!important;*/
+
+  /*margin-right: auto!important;*/
+  overflow-x: hidden;
+}
+.header-logo{
+    display: table-cell; vertical-align: middle;
+    height: 38px;
+}
+.hide-coup{
+  display: none;
+}
+#logo {
+    margin-left: 58px;
+    width: 195px;
+    height: 38px;
+    cursor: pointer;
+
+}
+.logo-txt{
+    font-size: 22px;
+    font-family: 'Source Sans Pro';
+    margin-left: 20px;
+    vertical-align: middle;
+    display: inline-block;
+     font-weight: 300;
+}
+.tab-check{
+  width: 110%;margin-top: 60px;
+}
+.login-btn{
+    background-image: url("../../../assets/images/header/picto.png");
+    background-repeat: no-repeat;
+    background-size: 16px auto;
+    float: right;
+    margin-right: 30px;
+    font-family: 'Source Sans Pro';
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #465FA2;
+    border: none;
+    border-radius: 24px;
+    height: 38px;
+    padding-left: 50px;
+    padding-right: 35px;
+    background-position: 22px 8px;
+    outline: 0;
+   font-weight: 600;
+    margin-top: 8px;
+}
+.login-btn-mobile{
+    display: none;
+}
+.marge-div-gender{
+  padding: 0;
+  padding-right: 1%;
+}
+.btn-primary:active:hover{
+    opacity: 0.75!important;
+    outline: 0;
+    background-color: #465FA2;
+}
+button:hover, button:focus, button:active, button:visited{
+    opacity: 0.75!important;
+    outline: 0;
+}
+.btn:hover, .btn:focus, .btn:active, .btn:visited{
+    opacity: 0.75!important;
+    outline: 0;
+}
+
+.profile-btn{
+    background-image: url("../../../assets/images/header/pictoLogged.png");
+    background-repeat: no-repeat;
+    font-size: 15px;
+    color: #000000;
+  font-family: 'Source Sans Pro';
+    float: right;
+    margin-right: 55px;
+    vertical-align: middle;
+    cursor: pointer;
+    background-position: 4px 8px;
+    height: 38px;
+    padding-left: 27px;
+    background-color: transparent;
+    border: none;
+    background-size: 16px auto;
+    font-weight: 600;
+    margin-top: 8px;
+}
+.logout-btn{
+    background-image: url("../../../assets/images/header/logout.png");
+    background-repeat: no-repeat;
+    font-size: 15px;
+    color: #000000;
+  font-family: 'Source Sans Pro';
+    float: right;
+    margin-right: 55px;
+    vertical-align: middle;
+    cursor: pointer;
+    background-position: 4px 11px;
+    height: 38px;
+    padding-left: 27px;
+    background-color: transparent;
+    border: none;
+    background-size: 15px auto;
+    font-weight: 600;
+    margin-top: 8px;
+  text-transform: uppercase;
+}
+.error-input{
+  border: 1px solid red!important;
+}
+.error-input-login{
+  border-bottom: 1px solid red!important;
+}
+
+/*************************************************************************************************************************
+*************************************************Modalllll***********************************************************/
+.mar-top1{
+  margin-top: calc((100vh - 534px)/2);
+
+}
+@media (min-width: 700px) and (max-width: 768px) {
+  .mar-top1{
+    margin-top: calc((100vh - 534px)/2);
+    margin-left: 10%;
+  }
+}
+.mar-top2{
+  margin-top: calc((100vh - 634px)/2);
+
+}
+@media (min-width: 992px){
+    .modal-lg {
+        width: 734px!important;
+    }
+
+}
+.modal-content{
+    height:534px;
+    border-radius: 0px;
+    -webkit-transition: height 1s!important; /* For Safari 3.1 to 6.0 */
+    -moz-transition: height 1s!important;
+    -ms-transition: height 1s!important;
+    -o-transition: height 1s!important;
+    transition: height 1s!important;
+  overflow: hidden;
+
+}
+.slide-container{
+    width: 300%;
+
+}
+.modal-body{
+    padding: 0;
+}
+.hide-slide{
+    display: none;
+}
+.horizTranslate {
+    /*-webkit-transition-timing-function: linear;*/
+    /*transition-timing-function: linear;*/
+    -webkit-transition:all 1.0s ease-in-out;
+    -moz-transition:all 1.0s ease-in-out;
+    ms-transition:all 1.0s ease-in-out;
+    -o-transition:all 1.0s ease-in-out;
+    transition:all 1.0s ease-in-out;
+    margin-left: -100% !important;
+}
+.retourTranslate {
+    /*-webkit-transition-timing-function: linear;*/
+    /*transition-timing-function: linear;*/
+    -webkit-transition:all 1.0s ease-in-out;
+    -moz-transition:all 1.0s ease-in-out;
+    ms-transition:all 1.0s ease-in-out;
+    -o-transition:all 1.0s ease-in-out;
+    transition:all 1.0s ease-in-out;
+    margin-left: 0% !important;
+}
+.form-connect{
+    height: 470px;
+    background-color: #465FA2;
+    margin-top: 2px;
+    padding-left: 5%;
+    padding-right: 5%;
+
+
+}
+.fixed{
+  position: fixed;
+  width: 50%;
+  margin-left: -10%;
+}
+.title-form1{
+    color: white;
+    font-family: 'Source Sans Pro';
+    font-size: 24px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    font-weight: 600;
+}
+.form-connect .form-control{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    border-bottom: 1px solid white;
+    border-radius: 0px;
+    box-shadow:none;
+    padding: 0px;
+    opacity: 0.5;
+}
+
+.form-connect .form-control:focus{
+    box-shadow:none;
+    opacity: 1;
+}
+.label-email{
+    margin-left: 10%;
+    color: white;
+  font-family: 'Source Sans Pro';
+    font-size: 13px;
+  font-weight: 300;
+}
+.form-connect .form-control::-webkit-input-placeholder {font-size:14px; font-family: 'Source Sans Pro';font-weight: 300;color: white; }
+.form-connect .form-control:-moz-placeholder { font-size:14px; font-family: 'Source Sans Pro';font-weight: 300;color: white;}
+.form-connect .form-control::-moz-placeholder { font-size:14px; font-family: 'Source Sans Pro';font-weight: 300;color: white;}
+.form-connect .form-control:-ms-input-placeholder { font-size:14px; font-family: 'Source Sans Pro';font-weight: 300;color: white;}
+
+input[type=checkbox].css-checkbox1 {
+    position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0);
+    height:2px; width:2px; margin:-2px; padding:0; border:0;
+}
+
+input[type=checkbox].css-checkbox1 + label.css-label1 {
+    padding-left:26px;
+    height:30px;
+    display:inline-block;
+    background-repeat:no-repeat;
+    background-position: 0px 3px;
+    vertical-align:middle;
+    cursor:pointer;
+    padding-top: 5px;
+
+}
+
+input[type=checkbox].css-checkbox1:checked + label.css-label1 {
+    background-position: 0px -30px;
+}
+label.css-label1 {
+    background: transparent url('../../../assets/images/header/checkbox1.png') no-repeat;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-size: 26px;
+}
+
+.lab{
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+    margin-right: 15px;
+    font-size:15px;
+    color: white;
+}
+.btn-connexion{
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+    font-size: 19px;
+    color: #465FA2;
+    background-color: white;
+    border: none;
+    border-radius: 24px;
+    outline: 0;
+    width: 167px;
+}
+.btn-connexion.btn-primary:active:hover{
+    opacity: 0.75!important;
+    outline: 0;
+    background-color: white;
+}
+.mdp-oublie{
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+    font-size: 15px;
+    color: white;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover, a:focus, a:active, a:visited{
+    opacity: 0.75!important;
+    outline: 0;
+}
+.div-fb-connect{
+    height: 50px;
+    background-color: #3c5193;
+    margin-left: -12.5%;
+    margin-top: 27px;
+    text-align: center;
+    display: table;
+    width:125%;
+  display: none;
+}
+.lien-fb{
+
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+    font-size: 15px;
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+}
+.logo-fb{
+    margin-right: 15px;
+    height: 16px;
+    width: 8px;
+}
+.inscri-btn{
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+    font-size: 19px;
+    color: #ffffff;
+    background-color: #FF614D;
+    border: none;
+    border-radius: 24px;
+    outline: 0;
+    width: 260px;
+}
+
+.inscri-btn.btn-primary:active:hover{
+    opacity: 0.75!important;
+    outline: 0;
+    background-color: #FF614D;
+}
+.btn:hover, .btn:focus, .btn:active, .btn:visited{
+    opacity: 0.75!important;
+    outline: 0;
+}
+.fb-inscri-btn{
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+    font-size: 19px;
+    color: #ffffff;
+    background-color: #465FA2;
+    border: none;
+    border-radius: 24px;
+    outline: 0;
+    width: 260px;
+}
+
+.fb-inscri-btn.btn-primary:active:hover{
+    opacity: 0.75!important;
+    outline: 0;
+    background-color: #465FA2;
+}
+.div-btn-conn{
+    text-align: center;
+    text-align: center;
+    clear: both;
+    margin-top: 80px;
+}
+.title-block2{
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+    color: black;
+    font-size: 24px;
+    margin-top: 90px;
+}
+.content-block2{
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+    color: #60676C;
+    font-size: 20px;
+}
+
+.back-btn{
+    margin-left: 20px;
+    margin-top: -75px;
+}
+.close-btn{
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.txt-inscri{
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    color: black;
+    padding-top: 20px;
+}
+input[type=radio].css-checkbox {
+    position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0);
+    height:2px; width:2px; margin:-2px; padding:0; border:0;
+}
+
+input[type=radio].css-checkbox + label.css-label {
+    display:inline-block;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    color: white;
+    padding-top: 18px;
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+    font-size: 20px;
+
+}
+
+input[type=radio].css-checkbox:checked + label.css-label {
+
+    width:100%;
+    height: 82px;
+    background:  #495EA1 url('../../../assets/images/header/CombinedShape.png') no-repeat;
+    background-size: 11px auto;
+    background-position: 49% 54px;
+}
+label.css-label {
+    background-color: #B0B2B8;
+    width:100%;
+    height: 65px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-size: 23px;
+}
+.modal-content1{
+    height: 634px;
+    background-color: #F7F7F7;
+  overflow: hidden;
+}
+.form-inscri-margin{
+    /*margin-top: 32px;*/
+    margin-left: 7%;
+    margin-right: 7%;
+}
+.div-btn-inscrit{
+  text-align: center;margin-top: 32px;
+}
+.form-bottom{
+margin-bottom: -5px;
+}
+.fb-div{
+  text-align: center;
+  margin-top: 40px;
+}
+.form-inscri .form-control{
+
+    border: none;
+    color: black;
+    border-radius: 0px;
+    box-shadow:none;
+    opacity: 1;
+    font-size:20px; font-family:'Source Sans Pro'; font-style: italic; font-weight:600;color: #51535D;
+    background-color: white!important;
+}
+
+.form-inscri .form-control:focus{
+    box-shadow:none;
+    opacity: 1;
+}
+.form-inscri .form-control::-webkit-input-placeholder {font-size:20px; font-family:'Source Sans Pro'; font-style: italic; font-weight:600;color: #51535D; }
+.form-inscri .form-control:-moz-placeholder { font-size:20px; font-family:'Source Sans Pro'; font-style: italic; font-weight:600;color: #51535D;}
+.form-inscri .form-control::-moz-placeholder { font-size:20px; font-family:'Source Sans Pro'; font-style: italic; font-weight:600;color: #51535D;}
+.form-inscri .form-control:-ms-input-placeholder { font-size:20px;font-family:'Source Sans Pro'; font-style: italic; font-weight:600;color: #51535D;}
+
+.input-height{
+    height: 70px;
+}
+input[type=checkbox].css-checkbox2 {
+    position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0);
+    height:2px; width:2px; margin:-2px; padding:0; border:0;
+}
+
+input[type=checkbox].css-checkbox2 + label.css-label2 {
+    padding-left:40px;
+    height:30px;
+    display:inline-block;
+    background-repeat:no-repeat;
+    background-position: 0px 3px;
+    vertical-align:middle;
+    cursor:pointer;
+    margin-bottom: 28px;
+
+
+}
+
+input[type=checkbox].css-checkbox2:checked + label.css-label2 {
+    background-position: 0px -30px;
+}
+label.css-label2 {
+    background: transparent url('../../../assets/images/header/checkbox2.png') no-repeat;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-size: 26px;
+}
+input[type=checkbox].css-checkbox2 + label.css-label2 {
+  font-family:'Source Sans Pro';
+  font-weight:300;
+    margin-right: 15px;
+    font-size:14px;
+    color: #16232F;
+}
+input[type=checkbox].css-checkbox3 {
+    position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0);
+    height:2px; width:2px; margin:-2px; padding:0; border:0;
+}
+
+input[type=checkbox].css-checkbox3 + label.css-label3 {
+    padding-left:40px;
+    height:30px;
+    display:inline-block;
+    background-repeat:no-repeat;
+    background-position: 0px 3px;
+    vertical-align:middle;
+    cursor:pointer;
+    margin-bottom: 28px;
+
+
+}
+
+input[type=checkbox].css-checkbox3:checked + label.css-label3 {
+    background-position: 0px -30px;
+}
+label.css-label3 {
+    background: transparent url('../../../assets/images/header/checkbox2.png') no-repeat;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-size: 26px;
+}
+label.css-labelerror {
+  background: transparent url('../../../assets/images/header/checkbox2error.png') no-repeat;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-size: 26px;
+}
+input[type=checkbox].css-checkbox3 + label.css-label3 {
+  font-family:'Source Sans Pro';
+  font-weight:300;
+    margin-right: 15px;
+    font-size:14px;
+    color: #16232F;
+}
+
+input[type=checkbox].css-checkbox4 {
+    position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0);
+    height:2px; width:2px; margin:-2px; padding:0; border:0;
+}
+
+input[type=checkbox].css-checkbox4 + label.css-label4 {
+    padding-left:40px;
+    height:30px;
+    display:inline-block;
+    background-repeat:no-repeat;
+    background-position: 0px 3px;
+    vertical-align:middle;
+    cursor:pointer;
+
+}
+
+input[type=checkbox].css-checkbox4:checked + label.css-label4 {
+    background-position: 0px -30px;
+}
+label.css-label4 {
+    background: transparent url('../../../assets/images/header/checkbox2.png') no-repeat;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-size: 26px;
+}
+input[type=checkbox].css-checkbox4 + label.css-label4 {
+  font-family:'Source Sans Pro';
+  font-weight:300;
+    margin-right: 15px;
+    font-size:14px;
+    color: #16232F;
+}
+.full button span {
+    background-color: limegreen;
+    border-radius: 32px;
+    color: black;
+}
+.partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+}
+/*************************************************************************************************************************
+*************************************************Media Queries***********************************************************/
+
+@media screen  and (min-width: 700px) and (max-width: 885px) {
+    #logo {
+        margin-left: 5px;
+    }
+    .login-btn{
+        margin-right: 20px;
+        font-size: 12px;
+      margin-top: 0px;
+    }
+    .logo-txt{
+        margin-left: 5px;
+        font-size: 18px;
+    }
+    .profile-btn{
+      margin-right: 20px;
+      margin-top: 0px;
+    }
+}
+@media (max-width: 699px) {
+    header {
+      top:92px;
+        height: 62px;
+    }
+    .header-logo{
+        height: 22px;
+
+    }
+    #logo {
+        margin-left: 9px;
+        width: 109px;
+        height: 22px;
+        cursor: pointer;
+
+    }
+    .logo-txt{
+        font-size: 12px;
+      font-family:'Source Sans Pro';
+      font-weight:300;
+        margin-left: 5px;
+        vertical-align: middle;
+
+    }
+    .login-btn-mobile{
+        background-image: url("../../../assets/images/header/connect-Btn.png");
+        background-repeat: no-repeat;
+        background-size: 14px 20px;
+        float: right;
+        margin-right: 27px;
+        background-color: transparent;
+        border: none;
+        height: 22px;
+        background-position: 0px 0px;
+        outline: 0;
+        display: block;
+        width: 15px;
+        margin-top: 4px;
+    }
+    .login-btn{
+        display: none;
+    }
+  .profile-btn{
+    padding-left: 0px;
+    color: transparent;
+    margin-top: -5px;
+    background-size: 14px 20px;
+    width: 45px;
+    margin-right: 0px;
+  }
+  .logout-btn{
+    padding-left: 0px;
+    color: transparent;
+    margin-top: -5px;
+    background-size: 15px 15px;
+    width: 45px;
+    margin-right: 0px;
+  }
+}
+@media only screen and (min-device-width : 300px) and (max-device-width : 699px) {
+  .login-btn-mobile{
+    background-image: url("../../../assets/images/header/connect-Btn.png");
+    background-repeat: no-repeat;
+    background-size: 14px 20px;
+    float: right;
+    margin-right: 10px;
+    background-color: transparent;
+    border: none;
+    height: 22px;
+    background-position: 0px 0px;
+    outline: 0;
+    display: block;
+    width: 15px;
+    margin-top: 4px;
+  }
+  .profite-btn {
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #FF614D;
+    border: none;
+    border-radius: 24px;
+    outline: 0;
+    width: 118px;
+    height: 24px;
+    float: right;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 19px;
+    margin-right: 12px!important;
+    font-weight: 600;
+    line-height: 12px;
+  }
+  .profile-btn{
+    padding-left: 0px;
+    color: transparent;
+    margin-top: -5px;
+    background-size: 14px 20px;
+    width: 30px!important;
+    margin-right: 0px;
+  }
+  .logout-btn{
+    padding-left: 0px;
+    color: transparent;
+    margin-top: -5px;
+    background-size: 15px 15px;
+    width: 30px!important;
+    margin-right: 0px;
+  }
+}
+/**************************COUPON******************************************************/
+
+
+@media (min-width: 700px) {
+  .coupon{
+    z-index: 10;
+    width: 285px;
+    height: 170px;
+    background-color: white;
+    position: fixed;
+    right: 0;
+    top: 264px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 10px -4px  #465FA2 ;
+  }
+}
+.inscri-btn2{
+  display: none;
+}
+.close-btn2{
+  display: none;
+}
+.coupon-amount{
+  color: #474747;
+  font-size: 48px;
+  margin-top: 12px;
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+}
+p{
+  margin: 0;
+}
+.coupon-number{
+
+  color: #474747;
+  font-size: 17px;
+  margin-top: -8px;
+  margin-bottom: 8px;
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+}
+
+.profite-btn{
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  font-size: 21px;
+  color: #ffffff;
+  background-color: #FF614D;
+  border: none;
+  border-radius: 24px;
+  outline: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 5px;
+}
+.btn:hover, .btn:focus, .btn:active, .btn:visited{
+  opacity: 0.75!important;
+  outline: 0;
+}
+.btn-primary:active:hover{
+  opacity: 0.75!important;
+  outline: 0;
+  background-color: #FF614D;
+}
+@media screen  and  (max-width: 699px) {
+  .coupon{
+    height: 62px;
+    width: 100%;
+    position: fixed;
+    top:62px;
+    background-color: white;
+    z-index: 1000;
+  }
+  .coupon-amount{
+    display: inline-block;
+    font-size: 24px;
+    margin-top: 14px;
+    font-family: 'Source Sans Pro';
+    font-weight: 300;
+    margin-left: 20px;
+  }
+  .coupon-number{
+    color: #474747;
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+    display: inline-block;
+  }
+  .profite-btn{
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #FF614D;
+    border: none;
+    border-radius: 24px;
+    outline: 0;
+    width: 118px;
+    height: 24px;
+    float: right;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 19px;
+    margin-right: 19px;
+    font-weight: 600;
+    line-height: 12px;
+  }
+}
+/*============================================================================================*/
+@media (min-width: 1400px) {
+/*
+  header{
+    margin-left: -700px!important;
+    left: 50%;
+    width: 1400px;
+
+  }
+  */
+  .login-btn{
+    margin-right: 55px;
+  }
+
+}
+@media (max-width: 699px) {
+  .mar-top1{
+    margin-top:0px;
+  }
+  .fixed {
+    position: inherit;
+    margin-left: 0;
+    width: 100%;
+  }
+  .right-auth{
+    display: none;
+  }
+  .modal-dialog {
+    margin: 0px;
+    border: none;
+  }
+  .modal-content{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .form-connect{
+    margin-top: 0px;
+  }
+  .close-btn{
+    display:none;
+  }
+  .inscri-btn2{
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    font-size: 19px;
+    color: #ffffff;
+    background-color: #FF614D;
+    border: none;
+    border-radius: 24px;
+    outline: 0;
+    width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .inscri-btn2.btn-primary:active:hover{
+    opacity: 0.75!important;
+    outline: 0;
+    background-color: #FF614D;
+  }
+  .back-btn {
+    margin-top: -55px;
+  }
+  .gender-div{
+    margin-left: -4%;
+    margin-right: -4%;
+  }
+  .form-inscri-margin{
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .fb-div{
+    text-align: center;
+    margin-top: 0px;
+  }
+  .marge-div-gender{
+    padding: 0;
+    padding-right: 0%;
+  }
+.tab-check{
+  width: 110%;margin-top: 30px;
+}
+  .div-btn-inscrit{
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 0px;
+  }
+  .txt-inscri{
+    font-size: 28px;
+  }
+  .close-btn2{
+    display: block;
+    float: right;
+    margin-top: 10px;
+    margin-right: -15px;
+  }
+}
+
+@media  (max-width: 699px) and   (-ms-high-contrast: none)  {
+  .fixed {
+    position: inherit;
+    margin-left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .form-connect{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+@media  (min-width: 755px) and  (-ms-high-contrast: none) {
+  .fixed{
+    position: fixed;
+    width: 33%;
+    margin-left: -5%;
+    max-width: 370px;
+  }
+  .form-connect{
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+
+}
